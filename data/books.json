@@ -1,0 +1,81 @@
+{
+    "1": {
+        "arranger": "P P",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "Good beginner book",
+        "composer": "",
+        "grades": "1, 2, 3, ",
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "French Horn",
+            "Baritone / Euphonium"
+        ],
+        "publisher": "a publisher",
+        "title": "Times Pieces",
+        "volume": ""
+    },
+    "2": {
+        "arranger": "Unknown",
+        "bookNo": "1",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "Good beginner book",
+        "composer": "",
+        "grades": "1, 2, 3, 4",
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "French Horn",
+            "Baritone / Euphonium"
+        ],
+        "publisher": "ABRSM",
+        "title": "Times Pieces",
+        "volume": ""
+    },
+    "3": {
+        "arranger": "Unknown",
+        "bookNo": "1",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "Good beginner book",
+        "composer": "",
+        "grades": "1, 2, 3, 4",
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "French Horn",
+            "Baritone / Euphonium"
+        ],
+        "publisher": "ABRSM",
+        "title": "Times Pieces",
+        "volume": ""
+    },
+    "4": {
+        "arranger": "Unknown",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "The all round technique book.",
+        "composer": "Arban",
+        "grades": "1, 2, 3, 4, 5, 6, 7, 8",
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "French Horn",
+            "E flat Horn",
+            "Baritone / Euphonium"
+        ],
+        "publisher": "Boosey and Hawkes",
+        "title": "Cornet Method",
+        "volume": ""
+    },
+    "indexes": [
+        1,
+        2,
+        3,
+        4
+    ]
+}

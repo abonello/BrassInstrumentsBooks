@@ -1,0 +1,57 @@
+{
+    "1": {
+        "arranger": "P P",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "Good beginner book",
+        "composer": "",
+        "grades": "1, 2, 3, ",
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "French Horn",
+            "Baritone / Euphonium"
+        ],
+        "publisher": "a publisher",
+        "title": "Times Pieces",
+        "volume": ""
+    },
+    "2": {
+        "arranger": "Unknown",
+        "bookNo": "1",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "Good beginner book",
+        "composer": "",
+        "grades": "1, 2, 3, 4",
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "French Horn",
+            "Baritone / Euphonium"
+        ],
+        "publisher": "ABRSM",
+        "title": "Times Pieces",
+        "volume": ""
+    },
+    "3": {
+        "arranger": "Unknown",
+        "bookNo": "1",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "Good beginner book",
+        "composer": "",
+        "grades": "1, 2, 3, 4",
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "French Horn",
+            "Baritone / Euphonium"
+        ],
+        "publisher": "ABRSM",
+        "title": "Times Pieces",
+        "volume": ""
+    },
+    "indexes": [1, 2, 3]
+}
