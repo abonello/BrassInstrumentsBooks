@@ -7,13 +7,25 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    current_route = "index"
-    return render_template("index.html", current_route=current_route, message="This is the index page of Brass Instruments Books")
+    currentRoute = "index"
+    return render_template("index.html", current_route=currentRoute, message="This is the index page of Brass Instruments Books")
 
 @app.route('/add_book')
 def add_book():
-    current_route = "add_book"
-    return render_template("add_book.html", current_route=current_route, message="This is the ADD BOOK page of Brass Instruments Books")
+    currentRoute = "add_book"
+    return render_template("add_book.html", current_route=currentRoute, message="This is the ADD BOOK page of Brass Instruments Books")
+
+@app.route('/add_piece')
+def add_piece():
+    currentRoute = "add_piece"
+    bookInfo = {}
+    bookInfo['title'] = "An Example book"
+    bookInfo['volume'] = "2"
+    bookInfo['book'] = "1"
+    bookInfo['composer'] = "Beethoven"
+    bookInfo['arranger'] = "Someone"
+    bookInfo['publisher'] = "ABRSM"
+    return render_template("add_piece.html", current_route=currentRoute, message="This is the ADD PIECE page of Brass Instruments Books", bookInfo=bookInfo)
 
 
 if __name__ == '__main__':

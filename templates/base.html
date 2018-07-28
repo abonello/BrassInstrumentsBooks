@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> <!-- Uses data URI and can be used to avoid fake favicon requests -->
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> -->
     </head>
     <body>
         <!-- Page Header & Navigation -->
@@ -29,6 +29,9 @@
                                             {% endif %}
                                             {% if not(current_route == "add_book") %}
                                                 <li class="nav-item"><a class="nav-link scroll" href="{{ url_for('add_book') }}" id="userNav">Add Book</a></li>
+                                            {% endif %}
+                                            {% if not(current_route == "add_piece") %}
+                                                <li class="nav-item"><a class="nav-link scroll" href="{{ url_for('add_piece') }}" id="userNav">Add Piece</a></li>
                                             {% endif %}
                                             <!-- {#% if thisUser["is_logged"] and thisUser["game_on"] and not(thisUser["current_route"] == "game") %#}
                                                 <li class="nav-item"><a class="nav-link scroll" href="{#{ url_for('game', currentUser=thisUser['username']) }#}" id="gameNav">CURRENT GAME</a></li>

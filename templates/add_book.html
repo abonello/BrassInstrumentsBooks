@@ -4,96 +4,78 @@
         {{ message }}
         <form action="">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="title">Title of Book:</label>
-                        <input type="text" class="form-control" name="title" id="title" placeholder="title" value="">
-                    </div>
+                <div class="col-md-6 form-group">
+                    <label for="title">Title of Book:</label>
+                    <input type="text" class="form-control" name="title" id="title" placeholder="title" value="">
                 </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="title">Volume:</label>
-                        <input type="text" class="form-control" name="volume" id="volume" placeholder="volume" value="">
-                    </div>
+                <div class="col-md-3 form-group">
+                    <label for="title">Volume:</label>
+                    <input type="text" class="form-control" name="volume" id="volume" placeholder="volume" value="">
                 </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="title">Book Number:</label>
-                        <input type="text" class="form-control" name="bookNo" id="bookNo" placeholder="book number" value="">
+                <div class="col-md-3 form-group">
+                    <label for="title">Book Number:</label>
+                    <input type="text" class="form-control" name="bookNo" id="bookNo" placeholder="book number" value="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="title">Composer:</label>
+                    <input type="text" class="form-control" name="composer" id="composer" placeholder="composer" value="">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="title">Arranger:</label>
+                    <input type="text" class="form-control" name="arranger" id="arranger" placeholder="arranger" value="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 form-group">
+                    <label for="title">Publisher:</label>
+                    <input type="text" class="form-control" name="publisher" id="publisher" placeholder="publisher" value="">
+                </div>
+                <div class="col-md-3 form-group">
+                    <label for="clefs">Clefs:</label>
+                    <div class="form-group" id="clefs">
+                        <label class="checkbox-inline"><input type="checkbox" value="">Treble Clef</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Bass Clef</label>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="title">Composer:</label>
-                        <input type="text" class="form-control" name="composer" id="composer" placeholder="composer" value="">
+                <div class="col-md-6 form-group">
+                    <label for="grades">Grades:</label>
+                    <div class="form-group" id="grades">
+                        <label class="checkbox-inline"><input type="checkbox" value="">1</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">2</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">3</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">4</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">5</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">6</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">7</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">8</label>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="title">Arranger:</label>
-                        <input type="text" class="form-control" name="arranger" id="arranger" placeholder="arranger" value="">
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-9">
-                    <div class="form-group">
-                        <label for="title">Publisher:</label>
-                        <input type="text" class="form-control" name="publisher" id="publisher" placeholder="publisher" value="">
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="form-group">
-                        <label for="clefs">Clefs:</label>
-                        <div class="form-group" id="clefs">
-                            <label class="checkbox-inline"><input type="checkbox" value="">Treble Clef</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">Bass Clef</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="grades">Grades:</label>
-                        <!-- <input type="text" class="form-control" name="grades" id="grades" placeholder="grades" value=""> -->
-                        <div class="form-group" id="grades">
-                            <label class="checkbox-inline"><input type="checkbox" value="">1</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">2</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">3</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">4</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">5</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">6</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">7</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">8</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
+                <div class="col-md-6 form-group">
                     <label for="instruments">Instruments:</label>
                     <div class="form-group" id="instruments">
-                        <div class="form-group" id="clefs">
-                            <label class="checkbox-inline"><input type="checkbox" value="">Trumpet / Cornet / Flugelhorn</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">French Horn</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">E flat Horn</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">Trombone</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">Baritone / Euphonium</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">Bass Trombone</label>
-                            <label class="checkbox-inline"><input type="checkbox" value="">Tuba</label>
-                        </div>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Trumpet / Cornet / Flugelhorn</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">French Horn</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">E flat Horn</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Trombone</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Baritone / Euphonium</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Bass Trombone</label>
+                        <label class="checkbox-inline"><input type="checkbox" value="">Tuba</label>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="form-group">
-                    <label for="comments">Comments:</label>
+                    <label for="comment">Comments:</label>
                     <textarea class="form-control" rows="3" id="comment"></textarea>
                 </div>
             </div>
-
-            <button type="submit" class="btn btn-default" name="Proceed" type="submit" value="login">Submit</button>
+            <div class="row">
+                <button type="submit" class="btn btn-default" name="Proceed" type="submit" value="login">Submit</button>
+            </div>
         </form>
     </div>
 
