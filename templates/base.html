@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Books for Brass Instruments</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> <!-- Uses data URI and can be used to avoid fake favicon requests -->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <!-- Page Header & Navigation -->
+        <header class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-lg-3 min-height-header">
+                    <div class="row">
+                        <div class="logo">
+                            <div class="navbar navbar-default restrict-size">
+                                <div class="container-fluid">
+                                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                                        Menu
+                                    </button>
+                                    <div class="collapse navbar-collapse navHeaderCollapse">
+                                        <ul class="nav navbar-nav navbar-left navbar-main">
+                                            {% if not(current_route == "index") %}
+                                                <li class="nav-item active"><a class="nav-link scroll" href="{{ url_for('index') }}" id="home">Home</a></li>
+                                            {% endif %}
+                                            {% if not(current_route == "add_book") %}
+                                                <li class="nav-item"><a class="nav-link scroll" href="{{ url_for('add_book') }}" id="userNav">Add Book</a></li>
+                                            {% endif %}
+                                            <!-- {#% if thisUser["is_logged"] and thisUser["game_on"] and not(thisUser["current_route"] == "game") %#}
+                                                <li class="nav-item"><a class="nav-link scroll" href="{#{ url_for('game', currentUser=thisUser['username']) }#}" id="gameNav">CURRENT GAME</a></li>
+                                            {#% endif %#} -->
+                                            <!-- {#% if not(thisUser["current_route"] == "halloffame") %#}
+                                                <li class="nav-item"><a class="nav-link scroll" href="{#{ url_for('halloffame', currentUser=thisUser['username']) }#}" id="hofNav">Hall of Fame</a></li>
+                                            {#% endif %#} -->
+                                            <!-- {#% if not(thisUser["current_route"] == "about") %#}
+                                                <li class="nav-item"><a class="nav-link scroll" href="{#{ url_for('about', currentUser=thisUser['username']) }#}" id="aboutNav">About</a></li>
+                                            {#% endif %#} -->
+                                            <!-- {#% if not(thisUser["current_route"] == "contact") %#}
+                                                <li class="nav-item"><a class="nav-link scroll" href="{#{ url_for('contact', currentUser=thisUser['username']) }#}" id="contactNav">Contact</a></li>
+                                            {#% endif %#} -->
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- Registration Login Form-->
+                            <!-- {#%if thisUser["is_logged"] %#} -->
+                                <!-- <form class="align-right" method="POST" action="{#{ url_for('logout', currentUser=thisUser['username'], sessionNo=thisUser['session'] ) }#}">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-default form-align" name="logout" type="submit" value="logout">Logout</button>
+                                    </div>
+                                </form> -->
+                            <!-- {#% elif not thisUser["is_logged"] %#} -->
+                                <!-- <form class="align-right" method="POST" action="/login">
+                                    <div class="form-group login">
+                                        <input type="text" class="form-control form-username form-align" name="username" id="username" placeholder="username">
+                                        <button type="submit" class="btn btn-default form-align" name="login" type="submit" value="login" alt="login">Login</button>
+                                    </div>
+                                </form> -->
+                                <!-- <form class="align-right" method="POST" action="/">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-default form-align" name="register" type="submit" value="register">Register</button>
+                                    </div>
+                                </form> -->
+                            <!-- {#% endif %#} -->
+                            
+                            <img class="img-responsive" src="/static/img/FrenchHorn.png" alt="logo image" width="200px"></img>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-8 col-lg-9 title min-height-header">
+                    <h1>Books for Brass Instruments Teaching</h1>
+                    <h2>Anthony Bonello</h2>
+                </div>
+            </div>
+        </header>
+    
+        <!-- Main Content -->
+        <section class="container">
+               
+            {% block content %} 
+            {% endblock %}
+            
+        </section>
+
+    
+        <!-- Footer -->
+        <footer class="container-fluid">
+            <div class="row">
+        
+                <div class="col-sm-6 col-md-4 col-md-offset-2 copyright min-height-footer">
+                    <p>Copyright &copy; 2018, Anthony Bonello</p>
+                </div>
+        
+                <div class="col-sm-6 col-md-4 links min-height-footer">
+                    <ul class="list-inline social-links">
+                        <li><a href = "https://github.com/abonello/BrassInstrumentsBooks" target = "_blank"><i class="fa fa-github"></i> Github Repository</a></li>
+                        <li><a href = "https://www.linkedin.com/in/anthonybonello/" target = "_blank"><i class="fa fa-linkedin"></i> My Linkedin</a></li>
+                    </ul>
+                </div>
+        
+            </div>
+        </footer>
+    
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
