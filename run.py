@@ -136,8 +136,32 @@ def save_new_piece(id):
     currentRoute="view_book_details"
     return render_template("view_book_details.html", current_route=currentRoute, message="", thisBook=thisBook)
 
+def backupData():
+    store=""
+    storeBkU1=""
+    storeBkU2=""
+    with open("data/books.json", "r") as readdata:
+        store = readdata.read()
+    dataNow = json.loads(store)
+    with open("data/books_bkup1.json", "r") as bkup1:
+        storeBkU1 = bkup1.read()
+    dataBkU1 = json.loads(storeBkU1)
+    with open("data/books_bkup2.json", "r") as bkup2:
+        storeBkU2 = bkup2.read()
+    dataBkU2 = json.loads(storeBkU2)
+    with open("data/books_bkup1.json", "w") as outfile:
+        json.dump(dataNow, outfile, sort_keys=True, indent=4)
+    with open("data/books_bkup2.json", "w") as outfile:
+        json.dump(dataBkU1, outfile, sort_keys=True, indent=4)
+    with open("data/books_bkup3.json", "w") as outfile:
+        json.dump(dataBkU2, outfile, sort_keys=True, indent=4)
+    
 @app.route('/delete_book/<id>', methods=['GET', 'POST'])
 def delete_book(id): 
+
+    backupData()
+
+
     currentRoute = "view_books"
     store=""
     with open("data/books.json", "r") as readdata:

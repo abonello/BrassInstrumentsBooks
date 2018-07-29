@@ -1,4 +1,42 @@
 {
+    "1": {
+        "arranger": "P P",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "Good beginner book",
+        "composer": "",
+        "grades": "1, 2, 3, ",
+        "id": 1,
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "French Horn",
+            "Baritone / Euphonium"
+        ],
+        "publisher": "a publisher",
+        "title": "Times Pieces",
+        "volume": "1"
+    },
+    "2": {
+        "arranger": "famous",
+        "bookNo": "1",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "Good beginner book",
+        "composer": "Important",
+        "grades": "1, 2, 3, 4",
+        "id": 2,
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "French Horn",
+            "Baritone / Euphonium"
+        ],
+        "publisher": "ABRSM",
+        "title": "Times Pieces",
+        "volume": ""
+    },
     "3": {
         "arranger": "Unknown",
         "bookNo": "1",
@@ -168,7 +206,7 @@
                 "pieceComposer": "Leonard Bernstein",
                 "pieceTitle": "One Hand, One Heart from \"West Side Story\""
             },
-            {
+            {   
                 "entries": [
                     {
                         "grade": "1",
@@ -200,6 +238,8 @@
         "volume": "1"
     },
     "indexes": [
+        1,
+        2,
         3,
         4,
         5,
