@@ -2,40 +2,49 @@
 {% block content %}
     <div class="col-md-12 main min-height-main">
         {{ message }}
-        <form action="">
+        <form action="{{ url_for('save_new_piece', id=thisBook['id']) }}" method="POST">
+                <!-- bookInfo = {}
+                # bookInfo['title'] = thisBook['title']
+                # bookInfo['volume'] = thisBook['volume']
+                # bookInfo['book'] = thisBook['bookNo']
+                # bookInfo['composer'] = thisBook['composer']
+                # bookInfo['arranger'] = thisBook['arranger']
+                # bookInfo['publisher'] = thisBook['publisher'] -->
+
             <div class="row">
                 <div class="col-md-2">
-                    <label for="">title: {{ bookInfo['title'] }} </label>
+                    <label for="">title: {{ thisBook['title'] }} </label>
                 </div>
                 <div class="col-md-2">
                     <label for="">
-                        {% if bookInfo['volume'] > "" %}
-                            volume: {{ bookInfo['volume'] }}
+                        {% if thisBook['volume'] %}
+                            volume: {{ thisBook['volume'] }}
                         {% endif %}
-                        {% if bookInfo['volume'] and bookInfo['book'] %}
+                        {% if thisBook['volume'] and thisBook['bookNo'] %}
                             / 
                         {% endif %}
-                        {% if bookInfo['book'] %}
-                            book: {{ bookInfo['book'] }}
+                        {% if thisBook['bookNo'] %}
+                            book: {{ thisBook['bookNo'] }}
                         {% endif %}
                     </label>
                 </div>
                 <div class="col-md-5">
                     <label for="">
-                        {% if bookInfo['composer'] > "" %}
-                            composer: {{ bookInfo['composer'] }}
+                        {% if thisBook['composer'] %}
+                            composer: {{ thisBook['composer'] }}
                         {% endif %}
-                        {% if bookInfo['composer'] and bookInfo['arranger'] %}
+                        {% if thisBook['composer'] and thisBook['arranger'] %}
                             / 
                         {% endif %}
-                        {% if bookInfo['arranger'] %}
-                            arranger: {{ bookInfo['arranger'] }}
+                        {% if thisBook['arranger'] %}
+                            arranger: {{ thisBook['arranger'] }}
                         {% endif %}
                     </label>
                 </div>
                 <div class="col-md-3">
-                    <label for="">publisher: {{ bookInfo['publisher'] }} </label>
+                    <label for="">publisher: {{ thisBook['publisher'] }} </label>
                 </div>
+                <hr class="col-md-12">
             </div>
             <div class="row">
                 <div class="col-md-6 form-group">
@@ -43,7 +52,7 @@
                     <input type="text" class="form-control" name="title" id="title" placeholder="title" value="">
                 </div>
                 <div class="col-md-3 form-group">
-                    <label for="title">Number in book:</label>
+                    <label for="number">Number in book:</label>
                     <input type="text" class="form-control" name="number" id="number" placeholder="number" value="">
                 </div>
             </div>
@@ -64,7 +73,18 @@
                 </div>
                 <div class="col-md-3 form-group">
                     <label for="list">List:</label>
-                    <input type="text" class="form-control" name="list" id="list" placeholder="list" value="">
+                    <!-- <input type="text" class="form-control" name="list" id="list" placeholder="list" value=""> -->
+                    <div class="form-group" name="list">
+                        <div class="radio">
+                            <label><input type="radio" name="optradio1" >A</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio2">B</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="optradio3">C</label>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-3 form-group">
                     <label for="syllabusYear">Syllabus (Year):</label>
@@ -81,12 +101,12 @@
                 <button type="submit" class="btn btn-default" name="Proceed" type="submit" value="login">Submit</button>
             </div>
         </form>
-        <!-- title: {{ bookInfo['title'] }}<br>
-        volume: {{ bookInfo['volume'] }}<br>
-        book: {{ bookInfo['book'] }}<br>
-        composer: {{ bookInfo['composer'] }}<br>
-        arranger: {{ bookInfo['arranger'] }}<br>
-        publisher: {{ bookInfo['publisher'] }}<br> -->
+        <!-- title: {#{ bookInfo['title'] }#}<br>
+        volume: {#{ bookInfo['volume'] }#}<br>
+        book: {#{ bookInfo['book'] }#}<br>
+        composer: {#{ bookInfo['composer'] }#}<br>
+        arranger: {#{ bookInfo['arranger'] }#}<br>
+        publisher: {#{ bookInfo['publisher'] }#}<br> -->
     </div>
 
 {% endblock %}

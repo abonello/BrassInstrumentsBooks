@@ -15,7 +15,8 @@
     </div> -->
 
     <div class="col-md-12 main min-height-main">
-        <h2>Book id: {{ thisBook['id'] }}</h2>
+        <h2>Book id: {{ thisBook['id'] }}  </h2>
+        <button><a href="{{ url_for('add_piece', id = thisBook['id']) }}">Add a piece</a></button>
         <h3>{{ thisBook['title'] }}
             {% if thisBook['volume'] %} - volume: {{ thisBook['volume'] }} {% endif %}
             {% if thisBook['bookNo'] %} - book: {{ thisBook['bookNo'] }} {% endif %}
@@ -60,7 +61,7 @@
         {% else %}
             {% for piece in thisBook['pieces'] %}
                 <ul>
-                    <li>piece</li>
+                    <li>{{ piece }}</li>
                 </ul>
             {% endfor %}
         {% endif %}
