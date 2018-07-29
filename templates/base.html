@@ -30,9 +30,6 @@
                                             {% if not(current_route == "add_book") %}
                                                 <li class="nav-item"><a class="nav-link scroll" href="{{ url_for('add_book') }}" id="userNav">Add Book</a></li>
                                             {% endif %}
-                                            {% if not(current_route == "add_piece") %}
-                                                <li class="nav-item"><a class="nav-link scroll" href="{{ url_for('add_piece', id=0) }}" id="userNav">Add Piece</a></li>
-                                            {% endif %}
                                             {% if not(current_route == "view_books") %}
                                                 <li class="nav-item"><a class="nav-link scroll" href="{{ url_for('view_books') }}" id="userNav">View Books</a></li>
                                             {% endif %}

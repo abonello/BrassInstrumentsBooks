@@ -99,7 +99,7 @@ def add_piece(id):
 
 @app.route('/save_new_piece/<id>', methods=['GET', 'POST'])
 def save_new_piece(id):
-    print("Received data for book with id: {}".format(id))
+    # print("Received data for book with id: {}".format(id))
     if request.method == 'POST': 
         store=""
         with open("data/books.json", "r") as readdata:
@@ -136,6 +136,20 @@ def save_new_piece(id):
     currentRoute="view_book_details"
     return render_template("view_book_details.html", current_route=currentRoute, message="", thisBook=thisBook)
 
+@app.route('/delete_book/<id>', methods=['GET', 'POST'])
+def delete_book(id): 
+    currentRoute = "view_books"
+    store=""
+    with open("data/books.json", "r") as readdata:
+        store = readdata.read()
+    books = json.loads(store)
+    thisBook = books.pop(id, None)
+    books['indexes'].remove(int(id))
+    with open("data/books.json", "w") as outfile:
+            json.dump(books, outfile, sort_keys=True, indent=4)
+    # return "Books: {}<br><hr><br>{}".format(books, thisBook)
+    # return "Did not receive a POST method."
+    return render_template("view_books.html", current_route=currentRoute, message="This is the VIEW BOOKS page of Brass Instruments Books", books=books)
 
 
 if __name__ == '__main__':
