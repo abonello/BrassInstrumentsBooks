@@ -1,5 +1,6 @@
 {
     "1": {
+        "id": 1,
         "arranger": "P P",
         "bookNo": "",
         "clefs": [
@@ -18,13 +19,14 @@
         "volume": ""
     },
     "2": {
-        "arranger": "Unknown",
+        "id": 2,
+        "arranger": "famous",
         "bookNo": "1",
         "clefs": [
             "Treble Clef"
         ],
         "comment": "Good beginner book",
-        "composer": "",
+        "composer": "Important",
         "grades": "1, 2, 3, 4",
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
@@ -36,13 +38,14 @@
         "volume": ""
     },
     "3": {
+        "id": 3,
         "arranger": "Unknown",
         "bookNo": "1",
         "clefs": [
             "Treble Clef"
         ],
         "comment": "Good beginner book",
-        "composer": "",
+        "composer": "Beethoven",
         "grades": "1, 2, 3, 4",
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
@@ -54,6 +57,7 @@
         "volume": ""
     },
     "4": {
+        "id": 4,
         "arranger": "Unknown",
         "bookNo": "",
         "clefs": [

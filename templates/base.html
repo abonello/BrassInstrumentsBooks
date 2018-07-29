@@ -33,6 +33,9 @@
                                             {% if not(current_route == "add_piece") %}
                                                 <li class="nav-item"><a class="nav-link scroll" href="{{ url_for('add_piece') }}" id="userNav">Add Piece</a></li>
                                             {% endif %}
+                                            {% if not(current_route == "view_books") %}
+                                                <li class="nav-item"><a class="nav-link scroll" href="{{ url_for('view_books') }}" id="userNav">View Books</a></li>
+                                            {% endif %}
                                             <!-- {#% if thisUser["is_logged"] and thisUser["game_on"] and not(thisUser["current_route"] == "game") %#}
                                                 <li class="nav-item"><a class="nav-link scroll" href="{#{ url_for('game', currentUser=thisUser['username']) }#}" id="gameNav">CURRENT GAME</a></li>
                                             {#% endif %#} -->

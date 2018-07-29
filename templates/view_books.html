@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-md-12 main min-height-main">
+        {{ message }}
+    </div>
+    
+    <div class="col-md-12 main min-height-main">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>by</th>
+                    <th>publisher</th>
+                </tr>
+            </thead>
+            <tbody>
+                    {% for book in books %}
+                        {% if book != "indexes" %}
+                            <tr>
+                                <th>
+                                    {{ books[book]["id"] }}
+                                </th>
+                                <td>
+                                    {{ books[book]["title"] }}
+                                </td>
+                                <td>
+                                    {% if books[book]["composer"] and  books[book]["composer"] != "Unknown" %}
+                                        {{ books[book]["composer"] }}
+                                    {% endif %}
+                                    {% if books[book]["composer"] and books[book]["arranger"]  and  books[book]["composer"] != "Unknown"  and  books[book]["arranger"] != "Unknown" %}
+                                        / 
+                                    {% endif %}
+                                    {% if books[book]["arranger"]  and  books[book]["arranger"] != "Unknown" %}
+                                        {{ books[book]["arranger"] }}
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {{ books[book]["publisher"] }}
+                                </td>
+                                <td>
+                                    <button><a href="#">View Details</a></button>
+                                </td>
+                                <td>
+                                    <button><a href="#">Add Pieces</a></button>
+                                </td>
+                                <td>
+                                    <button><a href="#">Delete</a></button>
+                                </td>
+                            </tr>
+                        {% endif %}
+                    {% endfor %}
+
+
+
+            </tbody>
+
+        
+
+        </table>
+    </div>
+
+{% endblock %}

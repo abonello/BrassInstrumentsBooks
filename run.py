@@ -44,16 +44,17 @@ def save_book():
         with open("data/books.json", "r") as readdata:
             store = readdata.read()
         book = json.loads(store)
-        book[str(max(book['indexes'])+1)] = {   "title": title,
-                                            "volume": volume,
-                                            "bookNo": bookNo,
-                                            "composer": composer,
-                                            "arranger": arranger,
-                                            "publisher": publisher,
-                                            "clefs": clefs,
-                                            "grades": grades,
-                                            "instruments": instruments,
-                                            "comment": comment}
+        book[str(max(book['indexes'])+1)] = {   "id": max(book['indexes'])+1,
+                                                "title": title,
+                                                "volume": volume,
+                                                "bookNo": bookNo,
+                                                "composer": composer,
+                                                "arranger": arranger,
+                                                "publisher": publisher,
+                                                "clefs": clefs,
+                                                "grades": grades,
+                                                "instruments": instruments,
+                                                "comment": comment}
         book['indexes'].append(max(book['indexes'])+1)
 
         with open("data/books.json", "w") as outfile:
@@ -62,8 +63,26 @@ def save_book():
         return "Trying to save this book. {}, {}, {}, {}, {}, {}, clefs:{}, grades: {}, instruments: {}, comment: {}".format(title, volume, bookNo, composer, arranger, publisher, clefs, grades, instruments, comment)
     return "POST was not accepted."
 
+@app.route('/view_books')
+def view_books():
+    currentRoute = "view_books"
+    store=""
+    with open("data/books.json", "r") as readdata:
+        store = readdata.read()
+    books = json.loads(store)
+    
+    return render_template("view_books.html", current_route=currentRoute, message="This is the VIEW BOOKS page of Brass Instruments Books", books=books)
 
 
+# print(books)
+    # for book in books:
+        # print(book)
+        # print(books[book])
+        # if book != 'indexes':
+            # for each in books[book]:
+                # print(each)
+                # print(books[book][each])
+            # print(books[book][title])
 @app.route('/add_piece')
 def add_piece():
     currentRoute = "add_piece"
