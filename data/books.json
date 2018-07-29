@@ -1,6 +1,5 @@
 {
     "1": {
-        "id": 1,
         "arranger": "P P",
         "bookNo": "",
         "clefs": [
@@ -9,6 +8,7 @@
         "comment": "Good beginner book",
         "composer": "",
         "grades": "1, 2, 3, ",
+        "id": 1,
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
             "French Horn",
@@ -16,10 +16,9 @@
         ],
         "publisher": "a publisher",
         "title": "Times Pieces",
-        "volume": ""
+        "volume": "1"
     },
     "2": {
-        "id": 2,
         "arranger": "famous",
         "bookNo": "1",
         "clefs": [
@@ -28,6 +27,7 @@
         "comment": "Good beginner book",
         "composer": "Important",
         "grades": "1, 2, 3, 4",
+        "id": 2,
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
             "French Horn",
@@ -38,15 +38,16 @@
         "volume": ""
     },
     "3": {
-        "id": 3,
         "arranger": "Unknown",
         "bookNo": "1",
         "clefs": [
-            "Treble Clef"
+            "Treble Clef",
+            "Bass Clef"
         ],
         "comment": "Good beginner book",
         "composer": "Beethoven",
         "grades": "1, 2, 3, 4",
+        "id": 3,
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
             "French Horn",
@@ -54,10 +55,9 @@
         ],
         "publisher": "ABRSM",
         "title": "Times Pieces",
-        "volume": ""
+        "volume": "1"
     },
     "4": {
-        "id": 4,
         "arranger": "Unknown",
         "bookNo": "",
         "clefs": [
@@ -66,6 +66,7 @@
         "comment": "The all round technique book.",
         "composer": "Arban",
         "grades": "1, 2, 3, 4, 5, 6, 7, 8",
+        "id": 4,
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
             "French Horn",
@@ -76,10 +77,65 @@
         "title": "Cornet Method",
         "volume": ""
     },
+    "5": {
+        "arranger": "",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "Good for extra practice. Not in exam syllabus",
+        "composer": "Gatti",
+        "grades": "1, 2, 3, 4",
+        "id": 5,
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "French Horn",
+            "E flat Horn",
+            "Baritone / Euphonium"
+        ],
+        "publisher": "Riccordi",
+        "title": "Gran Metodo Teorico Pratico Progressivo",
+        "volume": "1"
+    },
+    "6": {
+        "arranger": "",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "Great for extra studies. Not in Syllabus",
+        "composer": "Gatti",
+        "grades": "3, 4, 5, 6, 7",
+        "id": 6,
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "French Horn",
+            "E flat Horn",
+            "Baritone / Euphonium"
+        ],
+        "pieces": {
+            "entries": [
+                {
+                    "grade": "",
+                    "instrument": "",
+                    "list": "",
+                    "syllabusYear": ""
+                }
+            ],
+            "numberInBook": "",
+            "pieceComposer": "",
+            "pieceTitle": ""
+        },
+        "publisher": "Riccordi",
+        "title": "Gran Metodo Teorico Pratico Progressivo",
+        "volume": "2"
+    },
     "indexes": [
         1,
         2,
         3,
-        4
+        4,
+        5,
+        6
     ]
 }

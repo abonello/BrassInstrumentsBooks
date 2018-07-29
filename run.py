@@ -39,6 +39,19 @@ def save_book():
             if request.form.get(str(ndx+1)) != None:
                 instruments.append(instrument)
         comment = request.form['comment']
+        pieces = {
+            "pieceTitle":"",
+            "numberInBook":"",
+            "pieceComposer":"",
+            "entries": [
+                {
+                    "instrument": "",
+                    "grade": "",
+                    "syllabusYear": "",
+                    "list": ""
+                }
+            ]
+        }
 
         store=""
         with open("data/books.json", "r") as readdata:
@@ -54,7 +67,9 @@ def save_book():
                                                 "clefs": clefs,
                                                 "grades": grades,
                                                 "instruments": instruments,
-                                                "comment": comment}
+                                                "comment": comment,
+                                                "pieces": pieces
+                                                }
         book['indexes'].append(max(book['indexes'])+1)
 
         with open("data/books.json", "w") as outfile:
@@ -73,16 +88,17 @@ def view_books():
     
     return render_template("view_books.html", current_route=currentRoute, message="This is the VIEW BOOKS page of Brass Instruments Books", books=books)
 
+@app.route('/view_book_details/<id>')
+def view_book_details(id):
+    currentRoute = "view_book_details"
+    store=""
+    with open("data/books.json", "r") as readdata:
+        store = readdata.read()
+    books = json.loads(store)
+    thisBook = books[id]
+    # return "This is the detailed view of book with ID:{}. <br>This book is {}".format(id, thisBook)
+    return render_template("view_book_details.html", current_route=currentRoute, message="This is the detailed view of book with ID:{}.".format(id), thisBook=thisBook)
 
-# print(books)
-    # for book in books:
-        # print(book)
-        # print(books[book])
-        # if book != 'indexes':
-            # for each in books[book]:
-                # print(each)
-                # print(books[book][each])
-            # print(books[book][title])
 @app.route('/add_piece')
 def add_piece():
     currentRoute = "add_piece"
@@ -94,6 +110,7 @@ def add_piece():
     bookInfo['arranger'] = "Someone"
     bookInfo['publisher'] = "ABRSM"
     return render_template("add_piece.html", current_route=currentRoute, message="This is the ADD PIECE page of Brass Instruments Books", bookInfo=bookInfo)
+
 
 
 if __name__ == '__main__':

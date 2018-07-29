@@ -39,7 +39,7 @@
                                     {{ books[book]["publisher"] }}
                                 </td>
                                 <td>
-                                    <button><a href="#">View Details</a></button>
+                                    <button><a href="{{ url_for('view_book_details', id = book) }}">View Details</a></button>
                                 </td>
                                 <td>
                                     <button><a href="#">Add Pieces</a></button>

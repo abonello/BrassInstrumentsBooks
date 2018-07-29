@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-md-12 main min-height-main">
+        {{ message }}
+        <hr>
+    </div>
+
+    <!-- <div class="col-md-12 main min-height-main">
+        {{ thisBook }}
+        {% for item in thisBook %}
+        <p>{{ item }}: {{ thisBook[item] }}</p>
+        {% endfor %}
+    
+        <hr>
+    </div> -->
+
+    <div class="col-md-12 main min-height-main">
+        <h2>Book id: {{ thisBook['id'] }}</h2>
+        <h3>{{ thisBook['title'] }}
+            {% if thisBook['volume'] %} - volume: {{ thisBook['volume'] }} {% endif %}
+            {% if thisBook['bookNo'] %} - book: {{ thisBook['bookNo'] }} {% endif %}
+        </h3>
+        <p><strong>
+            {% if thisBook['composer'] %} composer: {{ thisBook['composer'] }}   &nbsp; &nbsp;{% endif %}
+            {% if thisBook['arranger'] %} arranged by: {{ thisBook['arranger'] }} {% endif %}
+        </strong></p>
+        <p><strong>
+            Publisher: {{ thisBook['publisher'] }}
+        </strong></p>
+        <hr>
+        <p><strong>Clefs:</strong>
+            {% for clef in thisBook['clefs'] %}
+                {% if clef == "Treble Clef" %}
+                    <span style="font-size:2em">&#119070;</span>
+                {% elif clef == "Bass Clef" %}
+                    <span style="font-size:1.5em">&#119074;</span>
+                {% endif %}
+                {{ clef }} &nbsp; &nbsp;
+            {% endfor %}
+        </p>
+        <p><strong>Grades:</strong>
+            {{ thisBook['grades']}}
+        </p>
+        <hr>
+        <p><strong>Instruments:</strong>
+            <ul>
+            {% for instrument in thisBook['instruments'] %}
+                <li>{{ instrument}}</li>
+            {% endfor %}
+        </ul>
+        </p>
+        <hr>
+        <p><strong>Comments:</strong>
+            {{ thisBook['comment']}}
+        </p>
+        <hr>
+        <h3>Pieces</h3>
+        {% if thisBook['pieces'] == null %}
+            No pieces to display
+        {% else %}
+            {% for piece in thisBook['pieces'] %}
+                <ul>
+                    <li>piece</li>
+                </ul>
+            {% endfor %}
+        {% endif %}
+
+    </div>
+    
+    
+
+    
+
+{% endblock %}
