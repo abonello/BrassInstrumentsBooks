@@ -1,6 +1,5 @@
 {
     "1": {
-        "img": "",
         "arranger": "P P",
         "bookNo": "",
         "clefs": [
@@ -10,6 +9,7 @@
         "composer": "",
         "grades": "1, 2, 3, ",
         "id": 1,
+        "img": "",
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
             "French Horn",
@@ -19,8 +19,91 @@
         "title": "Times Pieces",
         "volume": "1"
     },
-    "2": {
+    "10": {
+        "arranger": "",
+        "bookNo": "",
+        "clefs": [],
+        "comment": "",
+        "composer": "",
+        "grades": "",
+        "id": 10,
         "img": "",
+        "instruments": [],
+        "pieces": [
+            {
+                "entries": [],
+                "numberInBook": "",
+                "p_index": [],
+                "pieceComposer": "",
+                "pieceTitle": ""
+            }
+        ],
+        "publisher": "",
+        "title": "",
+        "volume": ""
+    },
+    "11": {
+        "arranger": "tested",
+        "bookNo": "2",
+        "clefs": [
+            "Treble Clef",
+            "Bass Clef"
+        ],
+        "comment": "Test all",
+        "composer": "Testing Composer",
+        "grades": "1, 2, 3, 4",
+        "id": 11,
+        "img": "",
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "French Horn",
+            "E flat Horn",
+            "Trombone",
+            "Baritone / Euphonium",
+            "Bass Trombone",
+            "Tuba"
+        ],
+        "pieces": [
+            [
+                1,
+                2
+            ],
+            {
+                "entries": [
+                    {
+                        "comment": "Testing all",
+                        "grade": "7",
+                        "instrument": "trombone",
+                        "list": "C",
+                        "syllabusYear": "2017"
+                    }
+                ],
+                "numberInBook": "5",
+                "p_index": 1,
+                "pieceComposer": "Testing Composer",
+                "pieceTitle": "Test a new piece"
+            },
+            {
+                "entries": [
+                    {
+                        "comment": "Add another comment. This might be very long.",
+                        "grade": "5",
+                        "instrument": "trombone",
+                        "list": "B",
+                        "syllabusYear": "2017"
+                    }
+                ],
+                "numberInBook": "2",
+                "p_index": 2,
+                "pieceComposer": "Another Composer",
+                "pieceTitle": "Second test"
+            }
+        ],
+        "publisher": "Testing Publisher",
+        "title": "Testing Book",
+        "volume": "1"
+    },
+    "2": {
         "arranger": "famous",
         "bookNo": "1",
         "clefs": [
@@ -30,6 +113,7 @@
         "composer": "Important",
         "grades": "1, 2, 3, 4",
         "id": 2,
+        "img": "",
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
             "French Horn",
@@ -40,7 +124,6 @@
         "volume": ""
     },
     "3": {
-        "img": "",
         "arranger": "Unknown",
         "bookNo": "1",
         "clefs": [
@@ -51,6 +134,7 @@
         "composer": "Beethoven",
         "grades": "1, 2, 3, 4",
         "id": 3,
+        "img": "",
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
             "French Horn",
@@ -61,7 +145,6 @@
         "volume": "1"
     },
     "4": {
-        "img": "",
         "arranger": "Unknown",
         "bookNo": "",
         "clefs": [
@@ -71,6 +154,7 @@
         "composer": "Arban",
         "grades": "1, 2, 3, 4, 5, 6, 7, 8",
         "id": 4,
+        "img": "",
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
             "French Horn",
@@ -82,7 +166,6 @@
         "volume": ""
     },
     "5": {
-        "img": "",
         "arranger": "",
         "bookNo": "",
         "clefs": [
@@ -92,6 +175,7 @@
         "composer": "Gatti",
         "grades": "1, 2, 3, 4",
         "id": 5,
+        "img": "",
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
             "French Horn",
@@ -103,7 +187,6 @@
         "volume": "1"
     },
     "6": {
-        "img": "",
         "arranger": "",
         "bookNo": "",
         "clefs": [
@@ -113,6 +196,7 @@
         "composer": "Gatti",
         "grades": "3, 4, 5, 6, 7",
         "id": 6,
+        "img": "",
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
             "French Horn",
@@ -122,14 +206,15 @@
         "pieces": {
             "entries": [
                 {
-                    "p_id": "1",
                     "grade": "",
                     "instrument": "",
                     "list": "",
+                    "p_id": "1",
                     "syllabusYear": ""
                 }
             ],
             "numberInBook": "",
+            "p_index": [],
             "pieceComposer": "",
             "pieceTitle": ""
         },
@@ -138,7 +223,6 @@
         "volume": "2"
     },
     "7": {
-        "img": "",
         "arranger": "",
         "bookNo": "",
         "clefs": [
@@ -148,6 +232,7 @@
         "composer": "Alan Tomlinson",
         "grades": "1, 2",
         "id": 7,
+        "img": "",
         "instruments": [
             "Trumpet / Cornet / Flugelhorn"
         ],
@@ -156,7 +241,6 @@
         "volume": ""
     },
     "8": {
-        "img": "",
         "arranger": "",
         "bookNo": "",
         "clefs": [
@@ -166,6 +250,7 @@
         "composer": "Philip Sparke",
         "grades": "1, 2, 3",
         "id": 8,
+        "img": "",
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
             "E flat Horn",
@@ -185,6 +270,7 @@
         "composer": "",
         "grades": "1",
         "id": 9,
+        "img": "gradebygradetrumpet.jpg",
         "instruments": [
             "Trumpet / Cornet / Flugelhorn"
         ],
@@ -192,17 +278,17 @@
             {
                 "entries": [
                     {
-                        "p_id": "1",
                         "grade": "1",
                         "instrument": "Trumpet",
                         "list": "A",
+                        "p_id": 1,
                         "syllabusYear": "2017"
                     },
                     {
-                        "p_id": "2",
                         "grade": "2",
                         "instrument": "French Horn",
                         "list": "B",
+                        "p_id": 2,
                         "syllabusYear": "2017"
                     }
                 ],
@@ -213,10 +299,10 @@
             {
                 "entries": [
                     {
-                        "p_id": "1",
                         "grade": "1",
                         "instrument": "Trumpet",
                         "list": "B",
+                        "p_id": "1",
                         "syllabusYear": "2017"
                     }
                 ],
@@ -224,13 +310,13 @@
                 "pieceComposer": "Leonard Bernstein",
                 "pieceTitle": "One Hand, One Heart from \"West Side Story\""
             },
-            {   
+            {
                 "entries": [
                     {
-                        "p_id": "1",
                         "grade": "1",
                         "instrument": "Trumpet",
                         "list": "B",
+                        "p_id": "1",
                         "syllabusYear": "2017"
                     }
                 ],
@@ -241,10 +327,10 @@
             {
                 "entries": [
                     {
-                        "p_id": "1",
                         "grade": "1",
                         "instrument": "Trumpet",
                         "list": "A",
+                        "p_id": "1",
                         "syllabusYear": "2017"
                     }
                 ],
@@ -255,8 +341,7 @@
         ],
         "publisher": "Boosey and Hawkes",
         "title": "Grade by Grade Trumpet",
-        "volume": "1",
-        "img": "gradebygradetrumpet.jpg"
+        "volume": "1"
     },
     "indexes": [
         1,
@@ -267,6 +352,8 @@
         6,
         7,
         8,
-        9
+        9,
+        10,
+        11
     ]
 }

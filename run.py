@@ -44,23 +44,20 @@ def save_book():
         with open("data/books.json", "r") as readdata:
             store = readdata.read()
         book = json.loads(store)
-        book[str(max(book['indexes'])+1)] = {   "id": max(book['indexes'])+1,
-                                                "title": title,
-                                                "volume": volume,
+        book[str(max(book['indexes'])+1)] = {   "arranger": arranger,
                                                 "bookNo": bookNo,
-                                                "composer": composer,
-                                                "arranger": arranger,
-                                                "publisher": publisher,
                                                 "clefs": clefs,
-                                                "grades": grades,
-                                                "instruments": instruments,
                                                 "comment": comment,
-                                                "pieces": {
-                                                    "entries": [
-                                                        p_index: []
-                                                    ],
-                                                "img": ""
-                                                }
+                                                "composer": composer,
+                                                "grades": grades,
+                                                "id": max(book['indexes'])+1,
+                                                "img": "",
+                                                "instruments": instruments,
+                                                "pieces": [],
+                                                "publisher": publisher,
+                                                "title": title,
+                                                "volume": volume
+                                            }
         book['indexes'].append(max(book['indexes'])+1)
 
         with open("data/books.json", "w") as outfile:
@@ -113,27 +110,42 @@ def save_new_piece(id):
         thisBook = books[id]
         try:
             thisBook['pieces']
+            this_id = max(thisBook['pieces'][0])+1
+            thisBook['pieces'][0].append(this_id)
         except:
-            print("There were no pieces set yet")
-            thisBook['pieces'] = []
+            # print("There were no pieces set yet")
+            thisBook['pieces'] = [{"entries": [], "p_index": [], "numberInBook": "", 
+                                    "pieceComposer": "", "pieceTitle": ""}]
+            this_id = 1
+            thisBook['pieces'] = [[this_id]]
+
+
+        
 
         thisPiece={}
         thisPiece['pieceTitle'] = request.form['title']
         thisPiece['numberInBook'] = request.form['number']
         thisPiece['pieceComposer'] = request.form['composer']
+        thisPiece['p_index'] = this_id
+        # thisPiece['p_index'] = this_id
         thisPiece['entries'] = []
         entry = {}
         entry['instrument'] = request.form['instrument']
         entry['grade'] = request.form['grade']
-        if request.form['optradio1']:
-            entry['list'] = 'A'
-        elif request.form['optradio2']:
-            entry['list'] = 'B'
-        elif request.form['optradio3']:
-            entry['list'] = 'C'
+        # if request.form['optradio1']:
+        #     entry['list'] = 'A'
+        # elif request.form['optradio2']:
+        #     entry['list'] = 'B'
+        # elif request.form['optradio3']:
+        #     entry['list'] = 'C'
+        entry['list'] = request.form['list']
         entry['syllabusYear'] = request.form['syllabusYear']
+        entry['comment'] = request.form['comment']
         thisPiece['entries'].append(entry)
+        # thisPiece['p_index'].append(this_id)
         thisBook['pieces'].append(thisPiece)
+
+
 
         with open("data/books.json", "w") as outfile:
             json.dump(books, outfile, sort_keys=True, indent=4)
