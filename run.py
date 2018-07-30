@@ -55,7 +55,10 @@ def save_book():
                                                 "grades": grades,
                                                 "instruments": instruments,
                                                 "comment": comment,
-                                                "entries": [],
+                                                "pieces": {
+                                                    "entries": [
+                                                        p_index: []
+                                                    ],
                                                 "img": ""
                                                 }
         book['indexes'].append(max(book['indexes'])+1)
