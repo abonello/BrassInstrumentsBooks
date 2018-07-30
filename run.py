@@ -84,7 +84,8 @@ def view_book_details(id):
         store = readdata.read()
     books = json.loads(store)
     thisBook = books[id]
-    return render_template("view_book_details.html", current_route=currentRoute, message="This is the detailed view of book with ID:{}.".format(id), thisBook=thisBook)
+    return render_template("view_book_details.html", current_route=currentRoute, message="", thisBook=thisBook)
+    # return render_template("view_book_details.html", current_route=currentRoute, message="This is the detailed view of book with ID:{}.".format(id), thisBook=thisBook)
 
 @app.route('/add_piece/<id>')
 def add_piece(id):

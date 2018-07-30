@@ -1,5 +1,6 @@
 {
     "1": {
+        "img": "",
         "arranger": "P P",
         "bookNo": "",
         "clefs": [
@@ -19,6 +20,7 @@
         "volume": "1"
     },
     "2": {
+        "img": "",
         "arranger": "famous",
         "bookNo": "1",
         "clefs": [
@@ -38,6 +40,7 @@
         "volume": ""
     },
     "3": {
+        "img": "",
         "arranger": "Unknown",
         "bookNo": "1",
         "clefs": [
@@ -58,6 +61,7 @@
         "volume": "1"
     },
     "4": {
+        "img": "",
         "arranger": "Unknown",
         "bookNo": "",
         "clefs": [
@@ -78,6 +82,7 @@
         "volume": ""
     },
     "5": {
+        "img": "",
         "arranger": "",
         "bookNo": "",
         "clefs": [
@@ -98,6 +103,7 @@
         "volume": "1"
     },
     "6": {
+        "img": "",
         "arranger": "",
         "bookNo": "",
         "clefs": [
@@ -131,6 +137,7 @@
         "volume": "2"
     },
     "7": {
+        "img": "",
         "arranger": "",
         "bookNo": "",
         "clefs": [
@@ -148,6 +155,7 @@
         "volume": ""
     },
     "8": {
+        "img": "",
         "arranger": "",
         "bookNo": "",
         "clefs": [
@@ -241,7 +249,8 @@
         ],
         "publisher": "Boosey and Hawkes",
         "title": "Grade by Grade Trumpet",
-        "volume": "1"
+        "volume": "1",
+        "img": "gradebygradetrumpet.jpg"
     },
     "indexes": [
         1,

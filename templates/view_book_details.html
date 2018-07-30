@@ -5,19 +5,32 @@
         <hr>
     </div>
     <div class="col-md-12 main min-height-main">
-        <h2>Book id: {{ thisBook['id'] }}  </h2>
-        <button><a href="{{ url_for('add_piece', id = thisBook['id']) }}">Add a piece</a></button>
-        <h3>{{ thisBook['title'] }}
-            {% if thisBook['volume'] %} - volume: {{ thisBook['volume'] }} {% endif %}
-            {% if thisBook['bookNo'] %} - book: {{ thisBook['bookNo'] }} {% endif %}
-        </h3>
-        <p><strong>
-            {% if thisBook['composer'] %} composer: {{ thisBook['composer'] }}   &nbsp; &nbsp;{% endif %}
-            {% if thisBook['arranger'] %} arranged by: {{ thisBook['arranger'] }} {% endif %}
-        </strong></p>
-        <p><strong>
-            Publisher: {{ thisBook['publisher'] }}
-        </strong></p>
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Book id: {{ thisBook['id'] }}  </h2>
+                <button><a href="{{ url_for('add_piece', id = thisBook['id']) }}">Add a piece</a></button>
+                <h3>{{ thisBook['title'] }}
+                    {% if thisBook['volume'] %} - volume: {{ thisBook['volume'] }} {% endif %}
+                    {% if thisBook['bookNo'] %} - book: {{ thisBook['bookNo'] }} {% endif %}
+                </h3>
+                <p><strong>
+                    {% if thisBook['composer'] %} composer: {{ thisBook['composer'] }}   &nbsp; &nbsp;{% endif %}
+                    {% if thisBook['arranger'] %} arranged by: {{ thisBook['arranger'] }} {% endif %}
+                </strong></p>
+                <p><strong>
+                    Publisher: {{ thisBook['publisher'] }}
+                </strong></p>
+            </div>
+            <div class="col-sm-6">
+                {% if thisBook['img'] != "" %}
+                    <img src="/static/img/{{ thisBook['img'] }}" alt="{{ thisBook['title'] }}">
+                {% else %}
+                {% endif %}
+            </div>
+        </div>
+
+
+
         <hr>
         <p><strong>Clefs:</strong>
             {% for clef in thisBook['clefs'] %}
