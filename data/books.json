@@ -187,6 +187,12 @@
                         "instrument": "Trumpet",
                         "list": "A",
                         "syllabusYear": "2017"
+                    },
+                    {
+                        "grade": "2",
+                        "instrument": "French Horn",
+                        "list": "B",
+                        "syllabusYear": "2017"
                     }
                 ],
                 "numberInBook": "",

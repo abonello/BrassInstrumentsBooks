@@ -4,16 +4,6 @@
         {{ message }}
         <hr>
     </div>
-
-    <!-- <div class="col-md-12 main min-height-main">
-        {{ thisBook }}
-        {% for item in thisBook %}
-        <p>{{ item }}: {{ thisBook[item] }}</p>
-        {% endfor %}
-    
-        <hr>
-    </div> -->
-
     <div class="col-md-12 main min-height-main">
         <h2>Book id: {{ thisBook['id'] }}  </h2>
         <button><a href="{{ url_for('add_piece', id = thisBook['id']) }}">Add a piece</a></button>
@@ -43,33 +33,82 @@
             {{ thisBook['grades']}}
         </p>
         <hr>
-        <p><strong>Instruments:</strong>
+        <p><strong>Instruments:</strong></p>
             <ul>
             {% for instrument in thisBook['instruments'] %}
                 <li>{{ instrument}}</li>
             {% endfor %}
         </ul>
-        </p>
         <hr>
         <p><strong>Comments:</strong>
             {{ thisBook['comment']}}
         </p>
         <hr>
         <h3>Pieces</h3>
-        {% if thisBook['pieces'] == null %}
+        <!-- {#% if thisBook['pieces'] == null %#}
             No pieces to display
-        {% else %}
-            {% for piece in thisBook['pieces'] %}
-                <ul>
-                    <li>{{ piece }}</li>
-                </ul>
-            {% endfor %}
-        {% endif %}
+        {#% else %}
+            {#% for piece in thisBook['pieces'] %#} -->
 
-    </div>
-    
-    
+                <div class="col-md-12 main min-height-main">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>No.</th>
+                                <th>Composer</th>
+                                <th>Instrument</th>
+                                <th>Grd</th>
+                                <th>List</th>
+                                <th>Yr</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                {% if thisBook['pieces'] == null %}
+                                    No pieces to display
+                                {% else %}
+                                    {% for piece in thisBook['pieces'] %}
+                                        <!-- <ul>
+                                            <li>{{ piece }}</li>
+                                        </ul> -->
+                                        {% for entry in piece['entries'] %}
+                                            <tr>
+                                                <th>
+                                                    {{ piece["pieceTitle"] }}
+                                                </th>
+                                                <td>
+                                                    {{ piece["numberInBook"] }}
+                                                </td>
+                                                <td>
+                                                    {{ piece["pieceComposer"] }}
+                                                </td>
+                                                <td>
+                                                    {{ entry["instrument"] }}
+                                                </td>
+                                                <td>
+                                                    {{ entry["grade"] }}
+                                                </td>
+                                                <td>
+                                                    {{ entry["list"] }}
+                                                </td>
+                                                <td>
+                                                    {{ entry["syllabusYear"] }}
+                                                </td>
+                                                <td>
+                                                    <button><a href="{#{ url_for('add_piece', id = book) }#}">Edit</a></button>
+                                                </td>
+                                                <td>
+                                                    <button><a href="{#{ url_for('delete_book', id = book) }#}"><strong>X</strong></a></button>
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                    {% endfor %}
+                                {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            <!-- {#% endfor %#}
+        {#% endif %#} -->
 
-    
 
 {% endblock %}

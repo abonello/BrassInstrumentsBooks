@@ -96,7 +96,6 @@ def add_piece(id):
     currentRoute = "add_piece"
     return render_template("add_piece.html", current_route=currentRoute, message="This is the ADD PIECE page of Brass Instruments Books", thisBook=thisBook)
 
-
 @app.route('/save_new_piece/<id>', methods=['GET', 'POST'])
 def save_new_piece(id):
     # print("Received data for book with id: {}".format(id))
@@ -158,10 +157,7 @@ def backupData():
     
 @app.route('/delete_book/<id>', methods=['GET', 'POST'])
 def delete_book(id): 
-
     backupData()
-
-
     currentRoute = "view_books"
     store=""
     with open("data/books.json", "r") as readdata:
