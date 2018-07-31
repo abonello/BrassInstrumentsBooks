@@ -8,7 +8,7 @@
         ],
         "comment": "New Piece Layout",
         "composer": "New Composer",
-        "grades": "1, 2, 3, 4, 5, 6, 7, 8",
+        "grades": "3, 4, 5, 6",
         "id": 12,
         "img": "",
         "instruments": [
@@ -23,7 +23,8 @@
         "pieces": [
             [
                 3,
-                4
+                4,
+                5
             ],
             {
                 "3": {
@@ -47,6 +48,17 @@
                     "pieceComposer": "Old Composer",
                     "pieceTitle": "A new piece",
                     "syllabusYear": "2006"
+                },
+                "5": {
+                    "comment": "Trial",
+                    "grade": "1",
+                    "instrument": "trombone",
+                    "list": "A",
+                    "numberInBook": "1",
+                    "p_index": 5,
+                    "pieceComposer": "Newbie",
+                    "pieceTitle": "A new book",
+                    "syllabusYear": ""
                 }
             }
         ],
@@ -55,19 +67,24 @@
         "volume": "100"
     },
     "13": {
-        "arranger": "",
+        "arranger": "someone",
         "bookNo": "",
-        "clefs": [],
-        "comment": "",
-        "composer": "",
-        "grades": "",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "beginner book",
+        "composer": "A. Newbie",
+        "grades": "1, 2, 3",
         "id": 13,
         "img": "",
-        "instruments": [],
+        "instruments": [
+            "French Horn",
+            "E flat Horn"
+        ],
         "pieces": [],
-        "publisher": "",
-        "title": "Book to delete",
-        "volume": ""
+        "publisher": "ABRSM",
+        "title": "A new book",
+        "volume": "1"
     },
     "indexes": [
         12,

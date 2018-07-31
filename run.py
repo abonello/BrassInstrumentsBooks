@@ -103,7 +103,9 @@ def add_piece(id):
 @app.route('/save_new_piece/<id>', methods=['GET', 'POST'])
 def save_new_piece(id):
     # print("Received data for book with id: {}".format(id))
+
     if request.method == 'POST': 
+        backupData()
         store=""
         with open("data/books.json", "r") as readdata:
             store = readdata.read()
@@ -115,10 +117,11 @@ def save_new_piece(id):
             thisBook['pieces'][0].append(this_id)
         except:
             # print("There were no pieces set yet")
-            thisBook['pieces'] = [{"entries": [], "p_index": [], "numberInBook": "", 
-                                    "pieceComposer": "", "pieceTitle": ""}]
+            # thisBook['pieces'] = [{"entries": [], "p_index": [], "numberInBook": "", 
+            #                         "pieceComposer": "", "pieceTitle": ""}]
+            # thisBook['pieces'] = [[],{}]
             this_id = 1
-            thisBook['pieces'] = [[this_id]]
+            thisBook['pieces'] = [[this_id],{}]
 
 
         
@@ -198,11 +201,11 @@ def delete_book(id):
 
 @app.route('/delete_piece/<id>/<p_index>', methods=['GET', 'POST'])
 def delete_piece(id, p_index): 
-    print("Reached delete_piece Route")
+    # print("Reached delete_piece Route")
     # print("id: {}".format(id))
     # print("type(id): {}".format(type(id)))
     # print("p_index: {}".format(p_index))
-    # backupData()
+    backupData()
 
 
     currentRoute = "view_books"
@@ -249,6 +252,7 @@ def edit_book(id):
 @app.route('/save_book_edit/<id>', methods=['GET', 'POST'])
 def save_book_edit(id):
     if request.method == 'POST':
+        backupData()
         title = request.form['title']
         volume = request.form['volume']
         bookNo = request.form['bookNo']

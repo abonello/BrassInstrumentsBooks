@@ -23,7 +23,8 @@
         "pieces": [
             [
                 3,
-                4
+                4,
+                5
             ],
             {
                 "3": {
@@ -47,6 +48,17 @@
                     "pieceComposer": "Old Composer",
                     "pieceTitle": "A new piece",
                     "syllabusYear": "2006"
+                },
+                "5": {
+                    "comment": "Trial",
+                    "grade": "1",
+                    "instrument": "trombone",
+                    "list": "A",
+                    "numberInBook": "1",
+                    "p_index": 5,
+                    "pieceComposer": "Newbie",
+                    "pieceTitle": "A new book",
+                    "syllabusYear": ""
                 }
             }
         ],
@@ -55,55 +67,41 @@
         "volume": "100"
     },
     "13": {
-        "arranger": "New Arranger - Changed",
-        "bookNo": "10",
+        "arranger": "someone",
+        "bookNo": "",
         "clefs": [
-            "Bass Clef"
+            "Treble Clef"
         ],
-        "comment": "New Piece Layout- Changed",
-        "composer": "New Composer - Changed",
-        "grades": "1, 2, 3, 6, 7, 8",
+        "comment": "beginner book",
+        "composer": "A. Newbie",
+        "grades": "1, 2, 3",
         "id": 13,
-        "img": "trialURL",
+        "img": "",
         "instruments": [
-            "Trombone",
-            "Baritone / Euphonium",
-            "Bass Trombone",
-            "Tuba"
+            "French Horn",
+            "E flat Horn"
         ],
         "pieces": [
             [
-                3,
-                4
+                1
             ],
             {
-                "3": {
-                    "comment": "Test new piece layout #2",
-                    "grade": "2",
-                    "instrument": "Trombone",
+                "1": {
+                    "comment": "Testing Piece 1",
+                    "grade": "1",
+                    "instrument": "F Horn",
                     "list": "A",
-                    "numberInBook": "3",
-                    "p_index": 3,
+                    "numberInBook": "1",
+                    "p_index": 1,
                     "pieceComposer": "Newbie",
-                    "pieceTitle": "New Piece Layout 2",
+                    "pieceTitle": "Testing",
                     "syllabusYear": "2017"
-                },
-                "4": {
-                    "comment": "Check this one",
-                    "grade": "3",
-                    "instrument": "Tuba",
-                    "list": "B",
-                    "numberInBook": "7",
-                    "p_index": 4,
-                    "pieceComposer": "Old Composer",
-                    "pieceTitle": "A new piece",
-                    "syllabusYear": "2006"
                 }
             }
         ],
-        "publisher": "New Publisher",
-        "title": "New Layout Book - Changed",
-        "volume": "5"
+        "publisher": "ABRSM",
+        "title": "A new book",
+        "volume": "1"
     },
     "indexes": [
         12,
