@@ -127,23 +127,29 @@ def save_new_piece(id):
         thisPiece['numberInBook'] = request.form['number']
         thisPiece['pieceComposer'] = request.form['composer']
         thisPiece['p_index'] = this_id
-        # thisPiece['p_index'] = this_id
-        thisPiece['entries'] = []
-        entry = {}
-        entry['instrument'] = request.form['instrument']
-        entry['grade'] = request.form['grade']
+        # thisPiece['entries'] = []
+        thisPiece['instrument'] = request.form['instrument']
+        thisPiece['grade'] = request.form['grade']
+        thisPiece['list'] = request.form['list']
+        thisPiece['syllabusYear'] = request.form['syllabusYear']
+        thisPiece['comment'] = request.form['comment']
+
+
+        # entry = {}
+        # entry['instrument'] = request.form['instrument']
+        # entry['grade'] = request.form['grade']
         # if request.form['optradio1']:
         #     entry['list'] = 'A'
         # elif request.form['optradio2']:
         #     entry['list'] = 'B'
         # elif request.form['optradio3']:
         #     entry['list'] = 'C'
-        entry['list'] = request.form['list']
-        entry['syllabusYear'] = request.form['syllabusYear']
-        entry['comment'] = request.form['comment']
-        thisPiece['entries'].append(entry)
+        # entry['list'] = request.form['list']
+        # entry['syllabusYear'] = request.form['syllabusYear']
+        # entry['comment'] = request.form['comment']
+        # thisPiece['entries'].append(entry)
         # thisPiece['p_index'].append(this_id)
-        thisBook['pieces'].append(thisPiece)
+        thisBook['pieces'][1][str(this_id)] = thisPiece
 
 
 
@@ -187,6 +193,45 @@ def delete_book(id):
             json.dump(books, outfile, sort_keys=True, indent=4)
     # return "Books: {}<br><hr><br>{}".format(books, thisBook)
     # return "Did not receive a POST method."
+    return render_template("view_books.html", current_route=currentRoute, message="This is the VIEW BOOKS page of Brass Instruments Books", books=books)
+
+@app.route('/delete_piece/<id>/<p_index>', methods=['GET', 'POST'])
+def delete_piece(id, p_index): 
+    print("Reached delete_piece Route")
+    # print("id: {}".format(id))
+    # print("type(id): {}".format(type(id)))
+    # print("p_index: {}".format(p_index))
+    # backupData()
+
+
+    currentRoute = "view_books"
+    store=""
+    with open("data/books.json", "r") as readdata:
+        store = readdata.read()
+    books = json.loads(store)
+
+
+    # thisBook = books.pop(id, None)
+    # books['indexes'].remove(int(id))
+    
+
+    # print(books['indexes'])
+    # print(books[id]['pieces'])
+    # books[id]['pieces'].remove(int(p_index))
+    print(books[id]['pieces'][1][p_index])
+    thisBook = books[id]['pieces'][1].pop(p_index, None)
+    print("Item deleted: {}".format(thisBook))
+    print("Items remaining: {}".format(books))
+
+    books[id]['pieces'][0].remove(int(p_index))
+    # print(books)
+    # print(books[1]['id']['pieces'][0])
+    # print(books[str('id')])
+    with open("data/books.json", "w") as outfile:
+            json.dump(books, outfile, sort_keys=True, indent=4)
+    # return "Books: {}<br><hr><br>{}".format(books, thisBook)
+    # return "Did not receive a POST method."
+    # return "Reached delete_piece route."
     return render_template("view_books.html", current_route=currentRoute, message="This is the VIEW BOOKS page of Brass Instruments Books", books=books)
 
 

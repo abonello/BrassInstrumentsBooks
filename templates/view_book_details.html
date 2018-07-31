@@ -77,44 +77,66 @@
                             </tr>
                         </thead>
                         <tbody>
+                                
                                 {% if thisBook['pieces'] == null %}
                                     No pieces to display
                                 {% else %}
-                                    {% for piece in thisBook['pieces'] %}
+                                    <!-- {#% for piece in thisBook['pieces'][1] %#} -->
+                                    {% set pieces = thisBook['pieces'][1] %}
+                                    {#{ pieces }#}
+                                    <!-- {#% for ndx in thisBook['pieces'][0] %#} -->
+                                    {% for thisPiece in pieces %}
+                                    {{ pieces[thisPiece] }}<br>
+                                    <!-- {#% loop.index0 %#} -->
                                         <!-- <ul>
-                                            <li>{{ piece }}</li>
+                                            <li>{#{ piece }#}</li>
                                         </ul> -->
-                                        {% for entry in piece['entries'] %}
+                                        <!-- {#% for entry in piece['entries'] %#} -->
+                                        <!-- {#% if loop.index > 1 %#} -->
                                             <tr>
                                                 <th>
-                                                    {{ piece["pieceTitle"] }}
+                                                        <!-- {{ thisBook['pieces'][1][ndx] }} -->
+                                                    {{ pieces[thisPiece]["pieceTitle"] }}
+                                                    <!-- {#{ thisBook['pieces'][1][ndx]["pieceTitle"] }#} -->
+                                                    <!-- {#{ piece[ndx]["pieceTitle"] }#} -->
                                                 </th>
                                                 <td>
-                                                    {{ piece["numberInBook"] }}
+                                                    {{ pieces[thisPiece]["numberInBook"] }}
+                                                    <!-- {#{ piece["numberInBook"] }#} -->
                                                 </td>
                                                 <td>
-                                                    {{ piece["pieceComposer"] }}
+                                                    {{ pieces[thisPiece]["pieceComposer"] }}
+                                                    <!-- {#{ piece["pieceComposer"] }#} -->
                                                 </td>
                                                 <td>
-                                                    {{ entry["instrument"] }}
+                                                    <!-- {#{ entry["instrument"] }#} -->
+                                                    {{ pieces[thisPiece]["instrument"] }}
+                                                    <!-- {#{ piece["instrument"] }#} -->
                                                 </td>
                                                 <td>
-                                                    {{ entry["grade"] }}
+                                                    <!-- {#{ entry["grade"] }#} -->
+                                                    {{ pieces[thisPiece]["grade"] }}
+                                                    <!-- {#{ piece["grade"] }#} -->
                                                 </td>
                                                 <td>
-                                                    {{ entry["list"] }}
+                                                    <!-- {#{ entry["list"] }#} -->
+                                                    {{ pieces[thisPiece]["list"] }}
+                                                    <!-- {#{ piece["list"] }#} -->
                                                 </td>
                                                 <td>
-                                                    {{ entry["syllabusYear"] }}
+                                                    <!-- {#{ entry["syllabusYear"] }#} -->
+                                                    {{ pieces[thisPiece]["syllabusYear"] }}
                                                 </td>
                                                 <td>
                                                     <button><a href="{#{ url_for('add_piece', id = book) }#}">Edit</a></button>
                                                 </td>
                                                 <td>
-                                                    <button><a href="{#{ url_for('delete_book', id = book) }#}"><strong>X</strong></a></button>
+                                                    <button><a href="{{ url_for('delete_piece', id=thisBook['id'], p_index=pieces[thisPiece]['p_index']) }}"><strong>X</strong></a></button>
                                                 </td>
-                                            {% endfor %}
-                                        </tr>
+                                            <!-- {#% endfor %#} -->
+                                            
+                                            </tr>
+                                        <!-- {#% endif %#} -->
                                     {% endfor %}
                                 {% endif %}
                         </tbody>

@@ -1,58 +1,15 @@
 {
-    "1": {
-        "arranger": "P P",
-        "bookNo": "",
-        "clefs": [
-            "Treble Clef"
-        ],
-        "comment": "Good beginner book",
-        "composer": "",
-        "grades": "1, 2, 3, ",
-        "id": 1,
-        "img": "",
-        "instruments": [
-            "Trumpet / Cornet / Flugelhorn",
-            "French Horn",
-            "Baritone / Euphonium"
-        ],
-        "publisher": "a publisher",
-        "title": "Times Pieces",
-        "volume": "1"
-    },
-    "10": {
-        "arranger": "",
-        "bookNo": "",
-        "clefs": [],
-        "comment": "",
-        "composer": "",
-        "grades": "",
-        "id": 10,
-        "img": "",
-        "instruments": [],
-        "pieces": [
-            {
-                "entries": [],
-                "numberInBook": "",
-                "p_index": [],
-                "pieceComposer": "",
-                "pieceTitle": ""
-            }
-        ],
-        "publisher": "",
-        "title": "",
-        "volume": ""
-    },
-    "11": {
-        "arranger": "tested",
-        "bookNo": "2",
+    "12": {
+        "arranger": "New Arranger",
+        "bookNo": "1",
         "clefs": [
             "Treble Clef",
             "Bass Clef"
         ],
-        "comment": "Test all",
-        "composer": "Testing Composer",
-        "grades": "1, 2, 3, 4",
-        "id": 11,
+        "comment": "New Piece Layout",
+        "composer": "New Composer",
+        "grades": "1, 2, 3, 4, 5, 6, 7, 8",
+        "id": 12,
         "img": "",
         "instruments": [
             "Trumpet / Cornet / Flugelhorn",
@@ -65,295 +22,39 @@
         ],
         "pieces": [
             [
-                1,
-                2
+                3,
+                4
             ],
             {
-                "entries": [
-                    {
-                        "comment": "Testing all",
-                        "grade": "7",
-                        "instrument": "trombone",
-                        "list": "C",
-                        "syllabusYear": "2017"
-                    }
-                ],
-                "numberInBook": "5",
-                "p_index": 1,
-                "pieceComposer": "Testing Composer",
-                "pieceTitle": "Test a new piece"
-            },
-            {
-                "entries": [
-                    {
-                        "comment": "Add another comment. This might be very long.",
-                        "grade": "5",
-                        "instrument": "trombone",
-                        "list": "B",
-                        "syllabusYear": "2017"
-                    }
-                ],
-                "numberInBook": "2",
-                "p_index": 2,
-                "pieceComposer": "Another Composer",
-                "pieceTitle": "Second test"
-            }
-        ],
-        "publisher": "Testing Publisher",
-        "title": "Testing Book",
-        "volume": "1"
-    },
-    "2": {
-        "arranger": "famous",
-        "bookNo": "1",
-        "clefs": [
-            "Treble Clef"
-        ],
-        "comment": "Good beginner book",
-        "composer": "Important",
-        "grades": "1, 2, 3, 4",
-        "id": 2,
-        "img": "",
-        "instruments": [
-            "Trumpet / Cornet / Flugelhorn",
-            "French Horn",
-            "Baritone / Euphonium"
-        ],
-        "publisher": "ABRSM",
-        "title": "Times Pieces",
-        "volume": ""
-    },
-    "3": {
-        "arranger": "Unknown",
-        "bookNo": "1",
-        "clefs": [
-            "Treble Clef",
-            "Bass Clef"
-        ],
-        "comment": "Good beginner book",
-        "composer": "Beethoven",
-        "grades": "1, 2, 3, 4",
-        "id": 3,
-        "img": "",
-        "instruments": [
-            "Trumpet / Cornet / Flugelhorn",
-            "French Horn",
-            "Baritone / Euphonium"
-        ],
-        "publisher": "ABRSM",
-        "title": "Times Pieces",
-        "volume": "1"
-    },
-    "4": {
-        "arranger": "Unknown",
-        "bookNo": "",
-        "clefs": [
-            "Treble Clef"
-        ],
-        "comment": "The all round technique book.",
-        "composer": "Arban",
-        "grades": "1, 2, 3, 4, 5, 6, 7, 8",
-        "id": 4,
-        "img": "",
-        "instruments": [
-            "Trumpet / Cornet / Flugelhorn",
-            "French Horn",
-            "E flat Horn",
-            "Baritone / Euphonium"
-        ],
-        "publisher": "Boosey and Hawkes",
-        "title": "Cornet Method",
-        "volume": ""
-    },
-    "5": {
-        "arranger": "",
-        "bookNo": "",
-        "clefs": [
-            "Treble Clef"
-        ],
-        "comment": "Good for extra practice. Not in exam syllabus",
-        "composer": "Gatti",
-        "grades": "1, 2, 3, 4",
-        "id": 5,
-        "img": "",
-        "instruments": [
-            "Trumpet / Cornet / Flugelhorn",
-            "French Horn",
-            "E flat Horn",
-            "Baritone / Euphonium"
-        ],
-        "publisher": "Riccordi",
-        "title": "Gran Metodo Teorico Pratico Progressivo",
-        "volume": "1"
-    },
-    "6": {
-        "arranger": "",
-        "bookNo": "",
-        "clefs": [
-            "Treble Clef"
-        ],
-        "comment": "Great for extra studies. Not in Syllabus",
-        "composer": "Gatti",
-        "grades": "3, 4, 5, 6, 7",
-        "id": 6,
-        "img": "",
-        "instruments": [
-            "Trumpet / Cornet / Flugelhorn",
-            "French Horn",
-            "E flat Horn",
-            "Baritone / Euphonium"
-        ],
-        "pieces": {
-            "entries": [
-                {
-                    "grade": "",
-                    "instrument": "",
-                    "list": "",
-                    "p_id": "1",
-                    "syllabusYear": ""
+                "3": {
+                    "comment": "Test new piece layout #2",
+                    "grade": "2",
+                    "instrument": "Trombone",
+                    "list": "A",
+                    "numberInBook": "3",
+                    "p_index": 3,
+                    "pieceComposer": "Newbie",
+                    "pieceTitle": "New Piece Layout 2",
+                    "syllabusYear": "2017"
+                },
+                "4": {
+                    "comment": "Check this one",
+                    "grade": "3",
+                    "instrument": "Tuba",
+                    "list": "B",
+                    "numberInBook": "7",
+                    "p_index": 4,
+                    "pieceComposer": "Old Composer",
+                    "pieceTitle": "A new piece",
+                    "syllabusYear": "2006"
                 }
-            ],
-            "numberInBook": "",
-            "p_index": [],
-            "pieceComposer": "",
-            "pieceTitle": ""
-        },
-        "publisher": "Riccordi",
-        "title": "Gran Metodo Teorico Pratico Progressivo",
-        "volume": "2"
-    },
-    "7": {
-        "arranger": "",
-        "bookNo": "",
-        "clefs": [
-            "Treble Clef"
-        ],
-        "comment": "Good book for beginners.",
-        "composer": "Alan Tomlinson",
-        "grades": "1, 2",
-        "id": 7,
-        "img": "",
-        "instruments": [
-            "Trumpet / Cornet / Flugelhorn"
-        ],
-        "publisher": "A&C Black",
-        "title": "Abracadabra TRUMPET",
-        "volume": ""
-    },
-    "8": {
-        "arranger": "",
-        "bookNo": "",
-        "clefs": [
-            "Treble Clef"
-        ],
-        "comment": "Good beginner exercises.",
-        "composer": "Philip Sparke",
-        "grades": "1, 2, 3",
-        "id": 8,
-        "img": "",
-        "instruments": [
-            "Trumpet / Cornet / Flugelhorn",
-            "E flat Horn",
-            "Baritone / Euphonium"
-        ],
-        "publisher": "Anglo Music",
-        "title": "Skilful Studies - 40 Progressive Studies",
-        "volume": ""
-    },
-    "9": {
-        "arranger": "Janet Way",
-        "bookNo": "",
-        "clefs": [
-            "Treble Clef"
-        ],
-        "comment": "",
-        "composer": "",
-        "grades": "1",
-        "id": 9,
-        "img": "gradebygradetrumpet.jpg",
-        "instruments": [
-            "Trumpet / Cornet / Flugelhorn"
-        ],
-        "pieces": [
-            {
-                "entries": [
-                    {
-                        "grade": "1",
-                        "instrument": "Trumpet",
-                        "list": "A",
-                        "p_id": 1,
-                        "syllabusYear": "2017"
-                    },
-                    {
-                        "grade": "2",
-                        "instrument": "French Horn",
-                        "list": "B",
-                        "p_id": 2,
-                        "syllabusYear": "2017"
-                    }
-                ],
-                "numberInBook": "",
-                "pieceComposer": "Traditional English",
-                "pieceTitle": "The Barley Break"
-            },
-            {
-                "entries": [
-                    {
-                        "grade": "1",
-                        "instrument": "Trumpet",
-                        "list": "B",
-                        "p_id": "1",
-                        "syllabusYear": "2017"
-                    }
-                ],
-                "numberInBook": "",
-                "pieceComposer": "Leonard Bernstein",
-                "pieceTitle": "One Hand, One Heart from \"West Side Story\""
-            },
-            {
-                "entries": [
-                    {
-                        "grade": "1",
-                        "instrument": "Trumpet",
-                        "list": "B",
-                        "p_id": "1",
-                        "syllabusYear": "2017"
-                    }
-                ],
-                "numberInBook": "",
-                "pieceComposer": "Keith Ramon Cole",
-                "pieceTitle": "Granite"
-            },
-            {
-                "entries": [
-                    {
-                        "grade": "1",
-                        "instrument": "Trumpet",
-                        "list": "A",
-                        "p_id": "1",
-                        "syllabusYear": "2017"
-                    }
-                ],
-                "numberInBook": "",
-                "pieceComposer": "Traditional American",
-                "pieceTitle": "Shaker Melody"
             }
         ],
-        "publisher": "Boosey and Hawkes",
-        "title": "Grade by Grade Trumpet",
-        "volume": "1"
+        "publisher": "New Publisher",
+        "title": "New Layout Book",
+        "volume": "100"
     },
     "indexes": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10,
-        11
+        12
     ]
 }

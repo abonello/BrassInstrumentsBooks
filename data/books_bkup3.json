@@ -1,1 +1,196 @@
-{}
+{
+    "12": {
+        "arranger": "New Arranger",
+        "bookNo": "1",
+        "clefs": [
+            "Treble Clef",
+            "Bass Clef"
+        ],
+        "comment": "New Piece Layout",
+        "composer": "New Composer",
+        "grades": "1, 2, 3, 4, 5, 6, 7, 8",
+        "id": 12,
+        "img": "",
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "French Horn",
+            "E flat Horn",
+            "Trombone",
+            "Baritone / Euphonium",
+            "Bass Trombone",
+            "Tuba"
+        ],
+        "pieces": [
+            [
+                1,
+                2,
+                3
+            ],
+            {
+                "1": {
+                    "comment": "Test new piece layout #1",
+                    "grade": "1",
+                    "instrument": "Trumpet",
+                    "list": "C",
+                    "numberInBook": "1",
+                    "p_index": 1,
+                    "pieceComposer": "Newbie",
+                    "pieceTitle": "New Piece Layout 1",
+                    "syllabusYear": "2017"
+                },
+                "2": {
+                    "comment": "Test new piece layout #1 for another instrument",
+                    "grade": "2",
+                    "instrument": "French Horn",
+                    "list": "B",
+                    "numberInBook": "1",
+                    "p_index": 2,
+                    "pieceComposer": "Newbie",
+                    "pieceTitle": "New Piece Layout 1",
+                    "syllabusYear": "2017"
+                },
+                "3": {
+                    "comment": "Test new piece layout #2",
+                    "grade": "2",
+                    "instrument": "Trombone",
+                    "list": "A",
+                    "numberInBook": "3",
+                    "p_index": 3,
+                    "pieceComposer": "Newbie",
+                    "pieceTitle": "New Piece Layout 2",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "New Publisher",
+        "title": "New Layout Book",
+        "volume": "100"
+    },
+    "7": {
+        "arranger": "",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "Good book for beginners.",
+        "composer": "Alan Tomlinson",
+        "grades": "1, 2",
+        "id": 7,
+        "img": "",
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn"
+        ],
+        "publisher": "A&C Black",
+        "title": "Abracadabra TRUMPET",
+        "volume": ""
+    },
+    "8": {
+        "arranger": "",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "Good beginner exercises.",
+        "composer": "Philip Sparke",
+        "grades": "1, 2, 3",
+        "id": 8,
+        "img": "",
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn",
+            "E flat Horn",
+            "Baritone / Euphonium"
+        ],
+        "publisher": "Anglo Music",
+        "title": "Skilful Studies - 40 Progressive Studies",
+        "volume": ""
+    },
+    "9": {
+        "arranger": "Janet Way",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef"
+        ],
+        "comment": "",
+        "composer": "",
+        "grades": "1",
+        "id": 9,
+        "img": "gradebygradetrumpet.jpg",
+        "instruments": [
+            "Trumpet / Cornet / Flugelhorn"
+        ],
+        "pieces": [
+            {
+                "entries": [
+                    {
+                        "grade": "1",
+                        "instrument": "Trumpet",
+                        "list": "A",
+                        "p_id": 1,
+                        "syllabusYear": "2017"
+                    },
+                    {
+                        "grade": "2",
+                        "instrument": "French Horn",
+                        "list": "B",
+                        "p_id": 2,
+                        "syllabusYear": "2017"
+                    }
+                ],
+                "numberInBook": "",
+                "pieceComposer": "Traditional English",
+                "pieceTitle": "The Barley Break"
+            },
+            {
+                "entries": [
+                    {
+                        "grade": "1",
+                        "instrument": "Trumpet",
+                        "list": "B",
+                        "p_id": "1",
+                        "syllabusYear": "2017"
+                    }
+                ],
+                "numberInBook": "",
+                "pieceComposer": "Leonard Bernstein",
+                "pieceTitle": "One Hand, One Heart from \"West Side Story\""
+            },
+            {
+                "entries": [
+                    {
+                        "grade": "1",
+                        "instrument": "Trumpet",
+                        "list": "B",
+                        "p_id": "1",
+                        "syllabusYear": "2017"
+                    }
+                ],
+                "numberInBook": "",
+                "pieceComposer": "Keith Ramon Cole",
+                "pieceTitle": "Granite"
+            },
+            {
+                "entries": [
+                    {
+                        "grade": "1",
+                        "instrument": "Trumpet",
+                        "list": "A",
+                        "p_id": "1",
+                        "syllabusYear": "2017"
+                    }
+                ],
+                "numberInBook": "",
+                "pieceComposer": "Traditional American",
+                "pieceTitle": "Shaker Melody"
+            }
+        ],
+        "publisher": "Boosey and Hawkes",
+        "title": "Grade by Grade Trumpet",
+        "volume": "1"
+    },
+    "indexes": [
+        7,
+        8,
+        9,
+        12
+    ]
+}
