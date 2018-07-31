@@ -22,33 +22,10 @@
         ],
         "pieces": [
             [
-                1,
-                2,
-                3
+                3,
+                4
             ],
             {
-                "1": {
-                    "comment": "Test new piece layout #1",
-                    "grade": "1",
-                    "instrument": "Trumpet",
-                    "list": "C",
-                    "numberInBook": "1",
-                    "p_index": 1,
-                    "pieceComposer": "Newbie",
-                    "pieceTitle": "New Piece Layout 1",
-                    "syllabusYear": "2017"
-                },
-                "2": {
-                    "comment": "Test new piece layout #1 for another instrument",
-                    "grade": "2",
-                    "instrument": "French Horn",
-                    "list": "B",
-                    "numberInBook": "1",
-                    "p_index": 2,
-                    "pieceComposer": "Newbie",
-                    "pieceTitle": "New Piece Layout 1",
-                    "syllabusYear": "2017"
-                },
                 "3": {
                     "comment": "Test new piece layout #2",
                     "grade": "2",
@@ -59,6 +36,17 @@
                     "pieceComposer": "Newbie",
                     "pieceTitle": "New Piece Layout 2",
                     "syllabusYear": "2017"
+                },
+                "4": {
+                    "comment": "Check this one",
+                    "grade": "3",
+                    "instrument": "Tuba",
+                    "list": "B",
+                    "numberInBook": "7",
+                    "p_index": 4,
+                    "pieceComposer": "Old Composer",
+                    "pieceTitle": "A new piece",
+                    "syllabusYear": "2006"
                 }
             }
         ],
@@ -66,91 +54,23 @@
         "title": "New Layout Book",
         "volume": "100"
     },
-    "9": {
-        "arranger": "Janet Way",
+    "13": {
+        "arranger": "",
         "bookNo": "",
-        "clefs": [
-            "Treble Clef"
-        ],
+        "clefs": [],
         "comment": "",
         "composer": "",
-        "grades": "1",
-        "id": 9,
-        "img": "gradebygradetrumpet.jpg",
-        "instruments": [
-            "Trumpet / Cornet / Flugelhorn"
-        ],
-        "pieces": [
-            {
-                "entries": [
-                    {
-                        "grade": "1",
-                        "instrument": "Trumpet",
-                        "list": "A",
-                        "p_id": 1,
-                        "syllabusYear": "2017"
-                    },
-                    {
-                        "grade": "2",
-                        "instrument": "French Horn",
-                        "list": "B",
-                        "p_id": 2,
-                        "syllabusYear": "2017"
-                    }
-                ],
-                "numberInBook": "",
-                "pieceComposer": "Traditional English",
-                "pieceTitle": "The Barley Break"
-            },
-            {
-                "entries": [
-                    {
-                        "grade": "1",
-                        "instrument": "Trumpet",
-                        "list": "B",
-                        "p_id": "1",
-                        "syllabusYear": "2017"
-                    }
-                ],
-                "numberInBook": "",
-                "pieceComposer": "Leonard Bernstein",
-                "pieceTitle": "One Hand, One Heart from \"West Side Story\""
-            },
-            {
-                "entries": [
-                    {
-                        "grade": "1",
-                        "instrument": "Trumpet",
-                        "list": "B",
-                        "p_id": "1",
-                        "syllabusYear": "2017"
-                    }
-                ],
-                "numberInBook": "",
-                "pieceComposer": "Keith Ramon Cole",
-                "pieceTitle": "Granite"
-            },
-            {
-                "entries": [
-                    {
-                        "grade": "1",
-                        "instrument": "Trumpet",
-                        "list": "A",
-                        "p_id": "1",
-                        "syllabusYear": "2017"
-                    }
-                ],
-                "numberInBook": "",
-                "pieceComposer": "Traditional American",
-                "pieceTitle": "Shaker Melody"
-            }
-        ],
-        "publisher": "Boosey and Hawkes",
-        "title": "Grade by Grade Trumpet",
-        "volume": "1"
+        "grades": "",
+        "id": 13,
+        "img": "",
+        "instruments": [],
+        "pieces": [],
+        "publisher": "",
+        "title": "Book to delete",
+        "volume": ""
     },
     "indexes": [
-        9,
-        12
+        12,
+        13
     ]
 }

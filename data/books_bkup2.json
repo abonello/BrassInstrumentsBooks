@@ -66,26 +66,6 @@
         "title": "New Layout Book",
         "volume": "100"
     },
-    "8": {
-        "arranger": "",
-        "bookNo": "",
-        "clefs": [
-            "Treble Clef"
-        ],
-        "comment": "Good beginner exercises.",
-        "composer": "Philip Sparke",
-        "grades": "1, 2, 3",
-        "id": 8,
-        "img": "",
-        "instruments": [
-            "Trumpet / Cornet / Flugelhorn",
-            "E flat Horn",
-            "Baritone / Euphonium"
-        ],
-        "publisher": "Anglo Music",
-        "title": "Skilful Studies - 40 Progressive Studies",
-        "volume": ""
-    },
     "9": {
         "arranger": "Janet Way",
         "bookNo": "",
@@ -170,7 +150,6 @@
         "volume": "1"
     },
     "indexes": [
-        8,
         9,
         12
     ]

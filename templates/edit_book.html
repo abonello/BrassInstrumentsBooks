@@ -1,0 +1,193 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-md-12 main min-height-main">
+        {{ message }}
+        {{ thisBook['id'] }}
+        <!-- <form action="{#{ url_for('save_new_piece', id=thisBook['id']) }#}" method="POST">
+            <div class="row">
+                <div class="col-md-2">
+                    <label for="">title: {{ thisBook['title'] }} </label>
+                </div>
+                <div class="col-md-2">
+                    <label for="">
+                        {% if thisBook['volume'] %}
+                            volume: {{ thisBook['volume'] }}
+                        {% endif %}
+                        {% if thisBook['volume'] and thisBook['bookNo'] %}
+                            / 
+                        {% endif %}
+                        {% if thisBook['bookNo'] %}
+                            book: {{ thisBook['bookNo'] }}
+                        {% endif %}
+                    </label>
+                </div>
+                <div class="col-md-5">
+                    <label for="">
+                        {% if thisBook['composer'] %}
+                            composer: {{ thisBook['composer'] }}
+                        {% endif %}
+                        {% if thisBook['composer'] and thisBook['arranger'] %}
+                            / 
+                        {% endif %}
+                        {% if thisBook['arranger'] %}
+                            arranger: {{ thisBook['arranger'] }}
+                        {% endif %}
+                    </label>
+                </div>
+                <div class="col-md-3">
+                    <label for="">publisher: {{ thisBook['publisher'] }} </label>
+                </div>
+                <hr class="col-md-12">
+            </div>
+           
+        </form>
+    </div> -->
+
+    <div class="col-md-12 main min-height-main">
+            <form action="{{ url_for('save_book_edit', id=thisBook['id']) }}" method="POST">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="title">Title of Book:</label>
+                        <input type="text" class="form-control" name="title" id="title" placeholder="title" value="{{ thisBook['title'] }}">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label for="title">Volume:</label>
+                        <input type="text" class="form-control" name="volume" id="volume" placeholder="volume" value="{{ thisBook['volume'] }}">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label for="title">Book Number:</label>
+                        <input type="text" class="form-control" name="bookNo" id="bookNo" placeholder="book number" value="{{ thisBook['bookNo'] }}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="title">Composer:</label>
+                        <input type="text" class="form-control" name="composer" id="composer" placeholder="composer" value="{{ thisBook['composer'] }}">
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="title">Arranger:</label>
+                        <input type="text" class="form-control" name="arranger" id="arranger" placeholder="arranger" value="{{ thisBook['arranger'] }}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9 form-group">
+                        <label for="title">Publisher:</label>
+                        <input type="text" class="form-control" name="publisher" id="publisher" placeholder="publisher" value="{{ thisBook['publisher'] }}">
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label for="clefs">Clefs:</label>
+                        <div class="form-group" id="clefs">
+                            {% if "Treble Clef" in thisBook['clefs'] %}
+                                <label class="checkbox-inline"><input type="checkbox" name="clefs1" value="" checked>Treble Clef</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="clefs1" value="">Treble Clef</label>
+                            {% endif %}
+                            {% if "Bass Clef" in thisBook['clefs'] %}
+                                <label class="checkbox-inline"><input type="checkbox" name="clefs2" value="" checked>Bass Clef</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="clefs2" value="">Bass Clef</label>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="grades">Grades:</label>
+                        <div class="form-group" id="grades">
+                            {% set grades = thisBook['grades'] %}
+                            {% if grades.find('1')!=-1 %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade1" value="1" checked>1</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade1" value="1">1</label>
+                            {% endif %}
+                            {% if grades.find('2')!=-1 %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade2" value="2" checked>2</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade2" value="2">2</label>
+                            {% endif %}
+                            {% if grades.find('3')!=-1 %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade3" value="3" checked>3</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade3" value="3">3</label>
+                            {% endif %}
+                            {% if grades.find('4')!=-1 %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade4" value="4" checked>4</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade4" value="4">4</label>
+                            {% endif %}
+                            {% if grades.find('5')!=-1 %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade5" value="5" checked>5</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade5" value="5">5</label>
+                            {% endif %}
+                            {% if grades.find('6')!=-1 %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade6" value="6" checked>6</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade6" value="6">6</label>
+                            {% endif %}
+                            {% if grades.find('7')!=-1 %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade7" value="7" checked>7</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade7" value="7">7</label>
+                            {% endif %}
+                            {% if grades.find('8')!=-1 %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade8" value="8" checked>8</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="grade8" value="8">8</label>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="instruments">Instruments:</label>
+                        <div class="form-group" id="instruments">
+                            {% if "Trumpet / Cornet / Flugelhorn" in thisBook['instruments'] %}
+                                <label class="checkbox-inline"><input type="checkbox" name="1" value="" checked>Trumpet / Cornet / Flugelhorn</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="1" value="">Trumpet / Cornet / Flugelhorn</label>
+                            {% endif %}
+                            {% if "French Horn" in thisBook['instruments'] %}
+                                <label class="checkbox-inline"><input type="checkbox" name="2" value="" checked>French Horn</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="2" value="">French Horn</label>
+                            {% endif %}
+                            {% if "E flat Horn" in thisBook['instruments'] %}
+                                <label class="checkbox-inline"><input type="checkbox" name="3" value="" checked>E flat Horn</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="3" value="">E flat Horn</label>
+                            {% endif %}
+                            {% if "Trombone" in thisBook['instruments'] %}
+                                <label class="checkbox-inline"><input type="checkbox" name="4" value="" checked>Trombone</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="4" value="">Trombone</label>
+                            {% endif %}
+                            {% if "Baritone / Euphonium" in thisBook['instruments'] %}
+                                <label class="checkbox-inline"><input type="checkbox" name="5" value="" checked>Baritone / Euphonium</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="5" value="">Baritone / Euphonium</label>
+                            {% endif %}
+                            {% if "Bass Trombone" in thisBook['instruments'] %}
+                                <label class="checkbox-inline"><input type="checkbox" name="6" value="" checked>Bass Trombone</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="6" value="">Bass Trombone</label>
+                            {% endif %}
+                            {% if "Tuba" in thisBook['instruments'] %}
+                                <label class="checkbox-inline"><input type="checkbox" name="7" value="" checked>Tuba</label>
+                            {% else %}
+                                <label class="checkbox-inline"><input type="checkbox" name="7" value="">Tuba</label>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="comment">Comments:</label>
+                        <textarea class="form-control" name="comment" rows="3" id="comment">{{ thisBook['comment'] }}</textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <button type="submit" class="btn btn-default" name="Proceed" type="submit" value="login">Submit</button>
+                </div>
+            </form>
+        </div>
+
+{% endblock %}

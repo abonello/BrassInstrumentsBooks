@@ -15,6 +15,7 @@ def add_book():
     currentRoute = "add_book"
     return render_template("add_book.html", current_route=currentRoute, message="This is the ADD BOOK page of Brass Instruments Books")
 
+
 @app.route('/save_book', methods=['GET', 'POST'])
 def save_book():
     if request.method == 'POST':
@@ -234,6 +235,87 @@ def delete_piece(id, p_index):
     # return "Reached delete_piece route."
     return render_template("view_books.html", current_route=currentRoute, message="This is the VIEW BOOKS page of Brass Instruments Books", books=books)
 
+@app.route('/edit_book/<id>', methods=['GET', 'POST'])
+def edit_book(id):
+    currentRoute = "edit_book"
+    store=""
+    with open("data/books.json", "r") as readdata:
+        store = readdata.read()
+    books = json.loads(store)
+    thisBook = books.pop(id, None)
+    return render_template("edit_book.html", current_route=currentRoute, message="This is the EDIT BOOK page of Brass Instruments Books", thisBook=thisBook)
+    # return ("Edit book with ID: {}".format(id))
+
+@app.route('/save_book_edit/<id>', methods=['GET', 'POST'])
+def save_book_edit(id):
+    if request.method == 'POST':
+        title = request.form['title']
+        volume = request.form['volume']
+        bookNo = request.form['bookNo']
+        composer = request.form['composer']
+        arranger = request.form['arranger']
+        publisher = request.form['publisher']
+        clefs = []
+        for ndx, clef in enumerate(["Treble Clef", "Bass Clef"]):
+            if request.form.get('clefs'+str(ndx+1)) != None:
+                clefs.append(clef)
+        grades = ""
+        for grade in range (1,9):
+            if request.form.get('grade'+str(grade)) != None:
+                grades += str(grade)
+                grades += ", "
+        grades = grades[0:-2]
+        instruments = []
+        for ndx, instrument in enumerate(["Trumpet / Cornet / Flugelhorn", "French Horn", "E flat Horn", "Trombone", "Baritone / Euphonium", "Bass Trombone", "Tuba"]):
+            if request.form.get(str(ndx+1)) != None:
+                instruments.append(instrument)
+        comment = request.form['comment']
+
+        store=""
+        with open("data/books.json", "r") as readdata:
+            store = readdata.read()
+        book = json.loads(store)
+        # pieces=book[id]['pieces']
+        # img=book[id]['img']
+
+
+
+        book[id]["arranger"] = arranger
+        book[id]["bookNo"] = bookNo
+        book[id]["clefs"] = clefs
+        book[id]["comment"] = comment
+        book[id]["composer"] = composer
+        book[id]["grades"] = grades
+        book[id]["instruments"] = instruments
+        book[id]["publisher"] = publisher
+        book[id]["title"] = title
+        book[id]["volume"] = volume
+
+        # book[str(max(book['indexes']))] = {   "arranger": arranger,
+        #                                         "bookNo": bookNo,
+        #                                         "clefs": clefs,
+        #                                         "comment": comment,
+        #                                         "composer": composer,
+        #                                         "grades": grades,
+        #                                         "id": max(book['indexes'])+1,
+        #                                         "img": "",
+        #                                         "instruments": instruments,
+        #                                         "pieces": ,
+        #                                         "publisher": publisher,
+        #                                         "title": title,
+        #                                         "volume": volume
+        #                                     }
+        # book['indexes'].append(max(book['indexes'])+1)
+
+        with open("data/books.json", "w") as outfile:
+            json.dump(book, outfile, sort_keys=True, indent=4)
+        
+        currentRoute = "index"
+        # message = "<p>Trying to save this book.<br> id: {},<br> title{},<br> volume: {},<br> bookNo: {},<br> composer: {},<br> arranger: {},<br> publisher: {},<br> clefs: {},<br> grades: {},<br> instruments: {},<br> comment: {},<br> pieces: {},<br> img: {}</p>".format(id, title, volume, bookNo, composer, arranger, publisher, clefs, grades, instruments, comment, pieces, img)
+        # return message
+        message = "Book {} is updated.".format(id)
+        return render_template("index.html", current_route=currentRoute, message=message)
+    # return "POST was not accepted."
 
 if __name__ == '__main__':
     app.run(host=os.getenv('IP'), port=int(os.getenv('PORT', 8080)), debug=True)

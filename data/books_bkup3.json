@@ -66,24 +66,6 @@
         "title": "New Layout Book",
         "volume": "100"
     },
-    "7": {
-        "arranger": "",
-        "bookNo": "",
-        "clefs": [
-            "Treble Clef"
-        ],
-        "comment": "Good book for beginners.",
-        "composer": "Alan Tomlinson",
-        "grades": "1, 2",
-        "id": 7,
-        "img": "",
-        "instruments": [
-            "Trumpet / Cornet / Flugelhorn"
-        ],
-        "publisher": "A&C Black",
-        "title": "Abracadabra TRUMPET",
-        "volume": ""
-    },
     "8": {
         "arranger": "",
         "bookNo": "",
@@ -188,7 +170,6 @@
         "volume": "1"
     },
     "indexes": [
-        7,
         8,
         9,
         12
