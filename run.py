@@ -45,13 +45,19 @@ def save_book():
         with open("data/books.json", "r") as readdata:
             store = readdata.read()
         book = json.loads(store)
-        book[str(max(book['indexes'])+1)] = {   "arranger": arranger,
+        if len(book['indexes']) == 0:
+            nextIndex = 1
+        else:
+            nextIndex = max(book['indexes'])+1
+        # book[str(max(book['indexes'])+1)] = {   "arranger": arranger,
+        book[str(nextIndex)] = {   "arranger": arranger,
                                                 "bookNo": bookNo,
                                                 "clefs": clefs,
                                                 "comment": comment,
                                                 "composer": composer,
                                                 "grades": grades,
-                                                "id": max(book['indexes'])+1,
+                                                # "id": max(book['indexes'])+1,
+                                                "id": nextIndex,
                                                 "img": "",
                                                 "instruments": instruments,
                                                 "pieces": [],
@@ -59,7 +65,8 @@ def save_book():
                                                 "title": title,
                                                 "volume": volume
                                             }
-        book['indexes'].append(max(book['indexes'])+1)
+        # book['indexes'].append(max(book['indexes'])+1)
+        book['indexes'].append(nextIndex)
 
         with open("data/books.json", "w") as outfile:
             json.dump(book, outfile, sort_keys=True, indent=4)

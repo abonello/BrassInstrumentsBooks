@@ -1,81 +1,670 @@
 {
+    "1": {
+        "arranger": "Harris and Miller",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef",
+            "Bass Clef"
+        ],
+        "comment": "",
+        "composer": "",
+        "grades": "1",
+        "id": 1,
+        "img": "",
+        "instruments": [
+            "Trombone"
+        ],
+        "pieces": [
+            [
+                1
+            ],
+            {
+                "1": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "A",
+                    "numberInBook": "",
+                    "p_index": 1,
+                    "pieceComposer": "Anon",
+                    "pieceTitle": "Agincourt Song",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "ABRSM",
+        "title": "Time Pieces for Trombone",
+        "volume": "1"
+    },
+    "10": {
+        "arranger": "",
+        "bookNo": "",
+        "clefs": [
+            "Bass Clef"
+        ],
+        "comment": "",
+        "composer": "",
+        "grades": "1",
+        "id": 10,
+        "img": "",
+        "instruments": [
+            "Trombone"
+        ],
+        "pieces": [
+            [
+                1
+            ],
+            {
+                "1": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "B",
+                    "numberInBook": "1",
+                    "p_index": 1,
+                    "pieceComposer": "Edward Watson",
+                    "pieceTitle": "Trolls",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "Warwick Music",
+        "title": "Nordic Sketchbook for Trombone",
+        "volume": ""
+    },
+    "11": {
+        "arranger": "",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef",
+            "Bass Clef"
+        ],
+        "comment": "",
+        "composer": "",
+        "grades": "1",
+        "id": 11,
+        "img": "",
+        "instruments": [
+            "Trombone"
+        ],
+        "pieces": [
+            [
+                1
+            ],
+            {
+                "1": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "B",
+                    "numberInBook": "",
+                    "p_index": 1,
+                    "pieceComposer": "Pam Wedgwood",
+                    "pieceTitle": "Wrap It Up",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "Faber",
+        "title": "Really Easy Jazzin\u2019 About for Trombone",
+        "volume": ""
+    },
     "12": {
-        "arranger": "New Arranger",
+        "arranger": "",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef",
+            "Bass Clef"
+        ],
+        "comment": "\r\n",
+        "composer": "",
+        "grades": "1",
+        "id": 12,
+        "img": "",
+        "instruments": [
+            "Trombone"
+        ],
+        "pieces": [
+            [
+                1
+            ],
+            {
+                "1": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "C",
+                    "numberInBook": "1",
+                    "p_index": 1,
+                    "pieceComposer": "Derek Bourgeois",
+                    "pieceTitle": "Andante",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "Brass Wind",
+        "title": "Splinters of Bone, Op. 130",
+        "volume": ""
+    },
+    "13": {
+        "arranger": "",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef",
+            "Bass Clef"
+        ],
+        "comment": "Forton Music FM430 or FM431: BC or TC",
+        "composer": "",
+        "grades": "1",
+        "id": 13,
+        "img": "",
+        "instruments": [
+            "Trombone"
+        ],
+        "pieces": [
+            [
+                1
+            ],
+            {
+                "1": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "C",
+                    "numberInBook": "4",
+                    "p_index": 1,
+                    "pieceComposer": "Allan Herbie Jones",
+                    "pieceTitle": "Round",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "Forton Music",
+        "title": "10 Easy Studies for Trombone",
+        "volume": ""
+    },
+    "14": {
+        "arranger": "",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef",
+            "Bass Clef"
+        ],
+        "comment": "Con Moto: BC or TC brass editions",
+        "composer": "",
+        "grades": "1",
+        "id": 14,
+        "img": "",
+        "instruments": [
+            "Trombone"
+        ],
+        "pieces": [
+            [
+                1
+            ],
+            {
+                "1": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "C",
+                    "numberInBook": "1",
+                    "p_index": 1,
+                    "pieceComposer": "Jock McKenzie",
+                    "pieceTitle": "Pop",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "Con Moto",
+        "title": "Dance to the Beat of the World",
+        "volume": ""
+    },
+    "2": {
+        "arranger": "Tanner",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef",
+            "Bass Clef"
+        ],
+        "comment": "Spartan Press SP1215 or SP1213: BC trombone/\r\n\ufffc\ufffctuba edition or B b TC brass edition)",
+        "composer": "",
+        "grades": "1",
+        "id": 2,
+        "img": "",
+        "instruments": [
+            "Trombone",
+            "Tuba"
+        ],
+        "pieces": [
+            [
+                1
+            ],
+            {
+                "1": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "A",
+                    "numberInBook": "",
+                    "p_index": 1,
+                    "pieceComposer": "Anon",
+                    "pieceTitle": "Going Up Camborne Hill",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "Spartan Press",
+        "title": "Cornish Pastiche",
+        "volume": ""
+    },
+    "3": {
+        "arranger": "Adam and Hannickel",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef",
+            "Bass Clef"
+        ],
+        "comment": "Curnow Music: BC/TC edition; piano accomp. published separately)\r\n",
+        "composer": "",
+        "grades": "1",
+        "id": 3,
+        "img": "",
+        "instruments": [
+            "Trombone",
+            "Baritone / Euphonium"
+        ],
+        "pieces": [
+            [
+                1,
+                2
+            ],
+            {
+                "1": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "A",
+                    "numberInBook": "6",
+                    "p_index": 1,
+                    "pieceComposer": "Arbeau",
+                    "pieceTitle": "Bouffons",
+                    "syllabusYear": "2017"
+                },
+                "2": {
+                    "comment": "observing repeat",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "A",
+                    "numberInBook": "8",
+                    "p_index": 2,
+                    "pieceComposer": "Mozart",
+                    "pieceTitle": "Rondo alla Turca",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "Curnow Music",
+        "title": "Tons of Tunes from the Classics for Bassoon/Trombone/Euphonium",
+        "volume": ""
+    },
+    "4": {
+        "arranger": "",
         "bookNo": "1",
         "clefs": [
             "Treble Clef",
             "Bass Clef"
         ],
-        "comment": "New Piece Layout",
-        "composer": "New Composer",
-        "grades": "3, 4, 5, 6",
-        "id": 12,
+        "comment": "ABRSM: BC/ TC brass edition; Bb piano accomp. published separately",
+        "composer": "",
+        "grades": "",
+        "id": 4,
         "img": "",
         "instruments": [
-            "Trumpet / Cornet / Flugelhorn",
-            "French Horn",
-            "E flat Horn",
-            "Trombone",
-            "Baritone / Euphonium",
-            "Bass Trombone",
-            "Tuba"
+            "Trombone"
         ],
         "pieces": [
             [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            {
+                "1": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "A",
+                    "numberInBook": "",
+                    "p_index": 1,
+                    "pieceComposer": "Tom Davoren",
+                    "pieceTitle": "Romanza",
+                    "syllabusYear": "2017"
+                },
+                "2": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "A",
+                    "numberInBook": "",
+                    "p_index": 2,
+                    "pieceComposer": "Philip Sparke",
+                    "pieceTitle": "A Knight\u2019s Tale",
+                    "syllabusYear": "2017"
+                },
+                "3": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "B",
+                    "numberInBook": "",
+                    "p_index": 3,
+                    "pieceComposer": "Tom Davoren",
+                    "pieceTitle": "Waltz for E",
+                    "syllabusYear": "2017"
+                },
+                "4": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "B",
+                    "numberInBook": "",
+                    "p_index": 4,
+                    "pieceComposer": "David A. Stowell",
+                    "pieceTitle": "Strollin'",
+                    "syllabusYear": "2017"
+                },
+                "5": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "C",
+                    "numberInBook": "",
+                    "p_index": 5,
+                    "pieceComposer": "Peter Meechan",
+                    "pieceTitle": "One, Two, Three!",
+                    "syllabusYear": "2017"
+                },
+                "6": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "C",
+                    "numberInBook": "",
+                    "p_index": 6,
+                    "pieceComposer": "Philip Sparke",
+                    "pieceTitle": "Puppet\u2019s Dance",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "ABRSM",
+        "title": "Shining Brass",
+        "volume": ""
+    },
+    "5": {
+        "arranger": "Lawrance",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef",
+            "Bass Clef"
+        ],
+        "comment": "Brass Wind: BC Trombone Edition or TC Brass Edition\r\nBb piano accomp published separately.",
+        "composer": "",
+        "grades": "1",
+        "id": 5,
+        "img": "",
+        "instruments": [
+            "Trombone"
+        ],
+        "pieces": [
+            [
+                1,
+                2,
                 3,
                 4
             ],
             {
-                "3": {
-                    "comment": "Test new piece layout #2",
-                    "grade": "2",
+                "1": {
+                    "comment": "from Hansel and Gretel\r\nobserving repeats",
+                    "grade": "1",
                     "instrument": "Trombone",
                     "list": "A",
-                    "numberInBook": "3",
+                    "numberInBook": "",
+                    "p_index": 1,
+                    "pieceComposer": "Humperdinck",
+                    "pieceTitle": "Evening Prayer",
+                    "syllabusYear": "2017"
+                },
+                "2": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "A",
+                    "numberInBook": "",
+                    "p_index": 2,
+                    "pieceComposer": "Susato",
+                    "pieceTitle": "La Morisque",
+                    "syllabusYear": "2017"
+                },
+                "3": {
+                    "comment": "from Joseph and the Amazing Technicolor Dreamcoat",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "B",
+                    "numberInBook": "",
                     "p_index": 3,
-                    "pieceComposer": "Newbie",
-                    "pieceTitle": "New Piece Layout 2",
+                    "pieceComposer": "Andrew Lloyd Webber",
+                    "pieceTitle": "Joseph\u2019s Dreams",
                     "syllabusYear": "2017"
                 },
                 "4": {
-                    "comment": "Check this one",
-                    "grade": "3",
-                    "instrument": "Tuba",
+                    "comment": "from Pirates of the Caribbean",
+                    "grade": "1",
+                    "instrument": "Trombone",
                     "list": "B",
-                    "numberInBook": "7",
+                    "numberInBook": "",
                     "p_index": 4,
-                    "pieceComposer": "Old Composer",
-                    "pieceTitle": "A new piece",
-                    "syllabusYear": "2006"
+                    "pieceComposer": "Hans Zimmer and Trevor Morris",
+                    "pieceTitle": "I\u2019ve Got My Eye On You",
+                    "syllabusYear": "2017"
                 }
             }
         ],
-        "publisher": "New Publisher",
-        "title": "New Layout Book",
-        "volume": "100"
+        "publisher": "Brass Wind",
+        "title": "Winner Scores All",
+        "volume": ""
     },
-    "13": {
-        "arranger": "someone",
+    "6": {
+        "arranger": "Hare",
         "bookNo": "",
         "clefs": [
-            "Treble Clef"
+            "Treble Clef",
+            "Bass Clef"
         ],
-        "comment": "beginner book",
-        "composer": "A. Newbie",
-        "grades": "1, 2, 3",
-        "id": 13,
+        "comment": "BC / TC edition",
+        "composer": "",
+        "grades": "1",
+        "id": 6,
         "img": "",
         "instruments": [
-            "French Horn",
-            "E flat Horn"
+            "Trombone"
         ],
-        "pieces": [],
-        "publisher": "ABRSM",
-        "title": "A new book",
-        "volume": "1"
+        "pieces": [
+            [
+                1
+            ],
+            {
+                "1": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "A",
+                    "numberInBook": "",
+                    "p_index": 1,
+                    "pieceComposer": "Trad. Russian",
+                    "pieceTitle": "Song of the Volga Boatmen",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "Boosey & Hawkes",
+        "title": "The Magic Trombone",
+        "volume": ""
+    },
+    "7": {
+        "arranger": "",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef",
+            "Bass Clef"
+        ],
+        "comment": "Emerson E529: BC/ TC edition",
+        "composer": "",
+        "grades": "1",
+        "id": 7,
+        "img": "",
+        "instruments": [
+            "Trombone",
+            "Baritone / Euphonium"
+        ],
+        "pieces": [
+            [
+                1,
+                2
+            ],
+            {
+                "1": {
+                    "comment": "omitting trills",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "B",
+                    "numberInBook": "5",
+                    "p_index": 1,
+                    "pieceComposer": "Gordon Carr",
+                    "pieceTitle": "Henry the Hippo",
+                    "syllabusYear": "2017"
+                },
+                "2": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "B",
+                    "numberInBook": "13",
+                    "p_index": 2,
+                    "pieceComposer": "Gordon Carr",
+                    "pieceTitle": "Bernie the Bison",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "Emerson",
+        "title": "All God\u2019s Creatures for Trombone/Baritone",
+        "volume": ""
+    },
+    "8": {
+        "arranger": "",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef",
+            "Bass Clef"
+        ],
+        "comment": "",
+        "composer": "",
+        "grades": "1",
+        "id": 8,
+        "img": "",
+        "instruments": [
+            "Trombone"
+        ],
+        "pieces": [
+            [
+                1,
+                2
+            ],
+            {
+                "1": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "B",
+                    "numberInBook": "1",
+                    "p_index": 1,
+                    "pieceComposer": "Peter Graham",
+                    "pieceTitle": "Moscow",
+                    "syllabusYear": "2017"
+                },
+                "2": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "B",
+                    "numberInBook": "2",
+                    "p_index": 2,
+                    "pieceComposer": "Peter Graham",
+                    "pieceTitle": "Paris",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "Gramercy Music",
+        "title": "Cityscapes for Bb Instruments",
+        "volume": ""
+    },
+    "9": {
+        "arranger": "Sparke",
+        "bookNo": "",
+        "clefs": [
+            "Treble Clef",
+            "Bass Clef"
+        ],
+        "comment": "Anglo Music AMP 193-400: BC/TC edition",
+        "composer": "",
+        "grades": "1",
+        "id": 9,
+        "img": "",
+        "instruments": [
+            "Trombone"
+        ],
+        "pieces": [
+            [
+                1
+            ],
+            {
+                "1": {
+                    "comment": "",
+                    "grade": "1",
+                    "instrument": "Trombone",
+                    "list": "B",
+                    "numberInBook": "1",
+                    "p_index": 1,
+                    "pieceComposer": "Philip Sparke",
+                    "pieceTitle": "Nice to See You Again",
+                    "syllabusYear": "2017"
+                }
+            }
+        ],
+        "publisher": "Anglo Music",
+        "title": "Skilful Solos for Trombone",
+        "volume": ""
     },
     "indexes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
         12,
-        13
+        13,
+        14
     ]
 }
