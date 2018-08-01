@@ -328,5 +328,115 @@ def save_book_edit(id):
         return render_template("index.html", current_route=currentRoute, message=message)
     # return "POST was not accepted."
 
+@app.route('/edit_piece/<id>/<p_index>', methods=['GET', 'POST'])
+def edit_piece(id, p_index):
+    # return "Edit piece {} in book id {}.".format(p_index, id)
+    currentRoute = "edit_piece"
+    store=""
+    with open("data/books.json", "r") as readdata:
+        store = readdata.read()
+    books = json.loads(store)
+    thisBook = books.pop(id, None)
+    return render_template("edit_piece.html", current_route=currentRoute, message="This is the EDIT PIECE page of Brass Instruments Books", thisBook=thisBook, p_index=p_index)
+
+@app.route('/save_piece_edit/<id>/<p_index>', methods=['GET', 'POST'])
+def save_piece_edit(id, p_index):
+    if request.method == 'POST':
+        print(p_index)
+
+        backupData()
+        store=""
+        with open("data/books.json", "r") as readdata:
+            store = readdata.read()
+        books = json.loads(store)
+        thisBook = books[id]
+        # try:
+        #     thisBook['pieces']
+            # this_id = max(thisBook['pieces'][0])+1
+            # this_id = p_index
+            # thisBook['pieces'][0].append(this_id)
+        # except:
+            # print("There were no pieces set yet")
+            # thisBook['pieces'] = [{"entries": [], "p_index": [], "numberInBook": "", 
+            #                         "pieceComposer": "", "pieceTitle": ""}]
+            # thisBook['pieces'] = [[],{}]
+            # this_id = 1
+            # thisBook['pieces'] = [[this_id],{}]
+            # print("Why is there an error?")
+
+        thisPiece={}
+        thisPiece['pieceTitle'] = request.form['title']
+        thisPiece['numberInBook'] = request.form['number']
+        thisPiece['pieceComposer'] = request.form['composer']
+        thisPiece['p_index'] = p_index
+        # thisPiece['entries'] = []
+        thisPiece['instrument'] = request.form['instrument']
+        thisPiece['grade'] = request.form['grade']
+        thisPiece['list'] = request.form['list']
+        thisPiece['syllabusYear'] = request.form['syllabusYear']
+        thisPiece['comment'] = request.form['comment']
+
+
+        thisBook['pieces'][1][str(p_index)] = thisPiece
+
+
+
+        with open("data/books.json", "w") as outfile:
+            json.dump(books, outfile, sort_keys=True, indent=4)
+
+    currentRoute="view_book_details"
+    return render_template("view_book_details.html", current_route=currentRoute, message="", thisBook=thisBook)
+        
+        # backupData()
+        # title = request.form['title']
+        # volume = request.form['volume']
+        # bookNo = request.form['bookNo']
+        # composer = request.form['composer']
+        # arranger = request.form['arranger']
+        # publisher = request.form['publisher']
+        # clefs = []
+        # for ndx, clef in enumerate(["Treble Clef", "Bass Clef"]):
+        #     if request.form.get('clefs'+str(ndx+1)) != None:
+        #         clefs.append(clef)
+        # grades = ""
+        # for grade in range (1,9):
+        #     if request.form.get('grade'+str(grade)) != None:
+        #         grades += str(grade)
+        #         grades += ", "
+        # grades = grades[0:-2]
+        # instruments = []
+        # for ndx, instrument in enumerate(["Trumpet / Cornet / Flugelhorn", "French Horn", "E flat Horn", "Trombone", "Baritone / Euphonium", "Bass Trombone", "Tuba"]):
+        #     if request.form.get(str(ndx+1)) != None:
+        #         instruments.append(instrument)
+        # comment = request.form['comment']
+
+        # store=""
+        # with open("data/books.json", "r") as readdata:
+        #     store = readdata.read()
+        # book = json.loads(store)
+        # pieces=book[id]['pieces']
+        # img=book[id]['img']
+
+
+
+        # book[id]["arranger"] = arranger
+        # book[id]["bookNo"] = bookNo
+        # book[id]["clefs"] = clefs
+        # book[id]["comment"] = comment
+        # book[id]["composer"] = composer
+        # book[id]["grades"] = grades
+        # book[id]["instruments"] = instruments
+        # book[id]["publisher"] = publisher
+        # book[id]["title"] = title
+        # book[id]["volume"] = volume
+
+        # with open("data/books.json", "w") as outfile:
+        #     json.dump(book, outfile, sort_keys=True, indent=4)
+        
+        # currentRoute = "index"
+        # message = "Book {} is updated.".format(id)
+        # return render_template("index.html", current_route=currentRoute, message=message)
+        # pass
+
 if __name__ == '__main__':
     app.run(host=os.getenv('IP'), port=int(os.getenv('PORT', 8080)), debug=True)

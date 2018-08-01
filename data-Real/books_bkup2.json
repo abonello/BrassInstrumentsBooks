@@ -25,7 +25,7 @@
                     "instrument": "Trombone",
                     "list": "A",
                     "numberInBook": "",
-                    "p_index": "1",
+                    "p_index": 1,
                     "pieceComposer": "Anon",
                     "pieceTitle": "Agincourt Song",
                     "syllabusYear": "2017"
@@ -235,36 +235,7 @@
         "instruments": [
             "Trombone"
         ],
-        "pieces": [
-            [
-                1,
-                2
-            ],
-            {
-                "1": {
-                    "comment": "",
-                    "grade": "1",
-                    "instrument": "Trombone",
-                    "list": "C",
-                    "numberInBook": "1",
-                    "p_index": 1,
-                    "pieceComposer": "Adrian Taylor",
-                    "pieceTitle": "A Short March for Short Arms",
-                    "syllabusYear": "2017"
-                },
-                "2": {
-                    "comment": "",
-                    "grade": "1",
-                    "instrument": "Trombone",
-                    "list": "C",
-                    "numberInBook": "2",
-                    "p_index": 2,
-                    "pieceComposer": "Adrian Taylor",
-                    "pieceTitle": "The Long and the Short of It",
-                    "syllabusYear": "2017"
-                }
-            }
-        ],
+        "pieces": [],
         "publisher": "Warwick Music",
         "title": "Simple Studies on Trombone Technique",
         "volume": ""

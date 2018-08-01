@@ -130,7 +130,7 @@
                                                     {{ pieces[thisPiece]["syllabusYear"] }}
                                                 </td>
                                                 <td>
-                                                    <button><a href="{#{ url_for('add_piece', id = book) }#}">Edit</a></button>
+                                                    <button><a href="{{ url_for('edit_piece', id=thisBook['id'], p_index=pieces[thisPiece]['p_index']) }}">Edit</a></button>
                                                 </td>
                                                 <td>
                                                     <button><a href="{{ url_for('delete_piece', id=thisBook['id'], p_index=pieces[thisPiece]['p_index']) }}"><strong>X</strong></a></button>
