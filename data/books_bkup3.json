@@ -20,15 +20,15 @@
             ],
             {
                 "1": {
-                    "comment": "",
+                    "comment": "This is a test for editing the piece",
                     "grade": "1",
                     "instrument": "Trombone",
                     "list": "A",
                     "numberInBook": "",
-                    "p_index": 1,
+                    "p_index": "1",
                     "pieceComposer": "Anon",
-                    "pieceTitle": "Agincourt Song",
-                    "syllabusYear": "2017"
+                    "pieceTitle": "Agincourt Song-Edited",
+                    "syllabusYear": "20172017"
                 }
             }
         ],

@@ -33,42 +33,15 @@
                                             {% if not(current_route == "view_books") %}
                                                 <li class="nav-item"><a class="nav-link scroll" href="{{ url_for('view_books') }}" id="userNav">View Books</a></li>
                                             {% endif %}
-                                            <!-- {#% if thisUser["is_logged"] and thisUser["game_on"] and not(thisUser["current_route"] == "game") %#}
-                                                <li class="nav-item"><a class="nav-link scroll" href="{#{ url_for('game', currentUser=thisUser['username']) }#}" id="gameNav">CURRENT GAME</a></li>
-                                            {#% endif %#} -->
-                                            <!-- {#% if not(thisUser["current_route"] == "halloffame") %#}
-                                                <li class="nav-item"><a class="nav-link scroll" href="{#{ url_for('halloffame', currentUser=thisUser['username']) }#}" id="hofNav">Hall of Fame</a></li>
-                                            {#% endif %#} -->
-                                            <!-- {#% if not(thisUser["current_route"] == "about") %#}
-                                                <li class="nav-item"><a class="nav-link scroll" href="{#{ url_for('about', currentUser=thisUser['username']) }#}" id="aboutNav">About</a></li>
-                                            {#% endif %#} -->
-                                            <!-- {#% if not(thisUser["current_route"] == "contact") %#}
-                                                <li class="nav-item"><a class="nav-link scroll" href="{#{ url_for('contact', currentUser=thisUser['username']) }#}" id="contactNav">Contact</a></li>
-                                            {#% endif %#} -->
+                                            {% if not(current_route == "search") %}
+                                                <li class="nav-item"><a class="nav-link scroll" href="{{ url_for('search') }}" id="userNav">Search</a></li>
+                                            {% endif %}
+
                                         </ul>
                                     </div>
                                 </div>
                             </div> 
-                            <!-- Registration Login Form-->
-                            <!-- {#%if thisUser["is_logged"] %#} -->
-                                <!-- <form class="align-right" method="POST" action="{#{ url_for('logout', currentUser=thisUser['username'], sessionNo=thisUser['session'] ) }#}">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-default form-align" name="logout" type="submit" value="logout">Logout</button>
-                                    </div>
-                                </form> -->
-                            <!-- {#% elif not thisUser["is_logged"] %#} -->
-                                <!-- <form class="align-right" method="POST" action="/login">
-                                    <div class="form-group login">
-                                        <input type="text" class="form-control form-username form-align" name="username" id="username" placeholder="username">
-                                        <button type="submit" class="btn btn-default form-align" name="login" type="submit" value="login" alt="login">Login</button>
-                                    </div>
-                                </form> -->
-                                <!-- <form class="align-right" method="POST" action="/">
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-default form-align" name="register" type="submit" value="register">Register</button>
-                                    </div>
-                                </form> -->
-                            <!-- {#% endif %#} -->
+   
                             
                             <img class="img-responsive" src="/static/img/FrenchHorn.png" alt="logo image" width="200px"></img>
                         </div>

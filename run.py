@@ -1,6 +1,7 @@
 import os
 import json
 from flask import Flask, render_template, request, redirect, url_for
+import ast
 
 app = Flask(__name__)
 
@@ -342,7 +343,7 @@ def edit_piece(id, p_index):
 @app.route('/save_piece_edit/<id>/<p_index>', methods=['GET', 'POST'])
 def save_piece_edit(id, p_index):
     if request.method == 'POST':
-        print(p_index)
+        # print(p_index)
 
         backupData()
         store=""
@@ -350,19 +351,6 @@ def save_piece_edit(id, p_index):
             store = readdata.read()
         books = json.loads(store)
         thisBook = books[id]
-        # try:
-        #     thisBook['pieces']
-            # this_id = max(thisBook['pieces'][0])+1
-            # this_id = p_index
-            # thisBook['pieces'][0].append(this_id)
-        # except:
-            # print("There were no pieces set yet")
-            # thisBook['pieces'] = [{"entries": [], "p_index": [], "numberInBook": "", 
-            #                         "pieceComposer": "", "pieceTitle": ""}]
-            # thisBook['pieces'] = [[],{}]
-            # this_id = 1
-            # thisBook['pieces'] = [[this_id],{}]
-            # print("Why is there an error?")
 
         thisPiece={}
         thisPiece['pieceTitle'] = request.form['title']
@@ -386,57 +374,139 @@ def save_piece_edit(id, p_index):
 
     currentRoute="view_book_details"
     return render_template("view_book_details.html", current_route=currentRoute, message="", thisBook=thisBook)
+
+@app.route('/search', methods=['GET', 'POST'])
+def search():
+    store=""
+    with open("data/books.json", "r") as readdata:
+        store = readdata.read()
+    books = json.loads(store)
+
+    data = []
+    # print(books)
+    for book in books:
+        if book != "indexes":
+            # print(books[book])
+            # print(book)
+            # print(books[book])
+            # print("==========================================")
+            # print(books[book]["pieces"])
+            # print(books[book]["pieces"][1])
+            for piece in books[book]["pieces"][1]:
+                # print(piece)
+                # print(books[book]["pieces"][1][piece])
+                # print(books[book]["pieces"][1][piece]['pieceTitle'])
+                # print("==========================================")
+                thisPiece =[]
+                thisPiece.append(books[book]["pieces"][1][piece]['pieceTitle'])
+                # print(thisPiece)
+                thisPiece.append(books[book]["pieces"][1][piece]['pieceComposer'])
+                thisPiece.append(books[book]["title"])
+                thisPiece.append(books[book]["pieces"][1][piece]['instrument'])
+                thisPiece.append(books[book]["pieces"][1][piece]['grade'])
+                thisPiece.append(books[book]["pieces"][1][piece]['list'])
+                data.append(thisPiece)
+
+    # print(data)
+
+    #     {% if show[book]["pieces"]|length == 2 %}
+    #         {% for each in show[book]["pieces"][1] %}
+    #             <tr>
+    #                 <th><a href="#">{{ show[book]["pieces"][1][each]['pieceTitle'] }}</a></th>
+    #                 <td>{{ show[book]["pieces"][1][each]['pieceComposer'] }}</td>
+    #                 <td>{{ show[book]["title"] }}</td>
+    #                 <td>{{ show[book]["pieces"][1][each]['instrument'] }}</td>
+    #                 <td>{{ show[book]["pieces"][1][each]['grade'] }}</td>
+    #                 <td>{{ show[book]["pieces"][1][each]['list'] }}</td>
+    #             </tr>
+    #         {% endfor %}
+    #     {% endif %}
+    # {% endfor %}
+
+
+
+
+
+    # show = books
+    # message = "Searching for pieces in all books {}".format(show)
+    message = "Searching for pieces in all books {}".format(data)
+    # return "Searching for pieces in all books {}".format(books)
+
+    
+
+
+    currentRoute="search"
+    hidden_data = []
+    return render_template("search.html", current_route=currentRoute, message=message, data=data, hidden_data=hidden_data)
+    # return render_template("search.html", current_route=currentRoute, message=message, data=data)
+    # return render_template("search.html", current_route=currentRoute, message=message, show=show)
         
-        # backupData()
-        # title = request.form['title']
-        # volume = request.form['volume']
-        # bookNo = request.form['bookNo']
-        # composer = request.form['composer']
-        # arranger = request.form['arranger']
-        # publisher = request.form['publisher']
-        # clefs = []
-        # for ndx, clef in enumerate(["Treble Clef", "Bass Clef"]):
-        #     if request.form.get('clefs'+str(ndx+1)) != None:
-        #         clefs.append(clef)
-        # grades = ""
-        # for grade in range (1,9):
-        #     if request.form.get('grade'+str(grade)) != None:
-        #         grades += str(grade)
-        #         grades += ", "
-        # grades = grades[0:-2]
-        # instruments = []
-        # for ndx, instrument in enumerate(["Trumpet / Cornet / Flugelhorn", "French Horn", "E flat Horn", "Trombone", "Baritone / Euphonium", "Bass Trombone", "Tuba"]):
-        #     if request.form.get(str(ndx+1)) != None:
-        #         instruments.append(instrument)
-        # comment = request.form['comment']
-
-        # store=""
-        # with open("data/books.json", "r") as readdata:
-        #     store = readdata.read()
-        # book = json.loads(store)
-        # pieces=book[id]['pieces']
-        # img=book[id]['img']
+# @app.route('/search_filter/<data>', methods=['GET', 'POST'])
+# def search_filter(data):
+@app.route('/search_filter', methods=['GET', 'POST'])
+def search_filter():
+    
+    
+    if request.method == 'POST':
+        data = request.form['data']
+        hidden_data = request.form['hidden_data']
+        temp_data = ast.literal_eval(data)
+        temp_hidden_data = ast.literal_eval(hidden_data)
+        # print(mylist)
+        # print(type(mylist))
+        temp_data += temp_hidden_data
 
 
+        filter=[]
+        filter.append(request.form['instrument'])
+        filter.append(request.form['grade'])
+        filter.append(request.form['list'])
 
-        # book[id]["arranger"] = arranger
-        # book[id]["bookNo"] = bookNo
-        # book[id]["clefs"] = clefs
-        # book[id]["comment"] = comment
-        # book[id]["composer"] = composer
-        # book[id]["grades"] = grades
-        # book[id]["instruments"] = instruments
-        # book[id]["publisher"] = publisher
-        # book[id]["title"] = title
-        # book[id]["volume"] = volume
+        tempInstrument = []
+        hidden_data=[]
+        if filter[0] == "all":
+            tempInstrument = temp_data
+        else:
+            # print("Check instruments:")
+            # print(filter[0])
+            for d in temp_data:
+                # print(d)
+                # print(d[3])
+                if d[3].lower() == filter[0]:
+                    tempInstrument.append(d)
+                else:
+                    hidden_data.append(d)
+        tempGrade = []
+        if filter[1] == "all":
+            tempGrade = tempInstrument
+        else:
+            for d in tempInstrument:
+                if d[4] == filter[1]:
+                    tempGrade.append(d)
+                else:
+                    hidden_data.append(d)
+        tempList = []
+        if filter[2] == "all":
+            tempList = tempGrade
+        else:
+            for d in tempGrade:
+                if d[5] == filter[2]:
+                    tempList.append(d)
+                else:
+                    hidden_data.append(d)
 
-        # with open("data/books.json", "w") as outfile:
-        #     json.dump(book, outfile, sort_keys=True, indent=4)
+        data = tempList
+
+
+
+        message=""
+        currentRoute="search"
+        return render_template("search.html", current_route=currentRoute, message=message, data=data, hidden_data=hidden_data)
+
+        # return "{}, {}".format(filter, data)
         
-        # currentRoute = "index"
-        # message = "Book {} is updated.".format(id)
-        # return render_template("index.html", current_route=currentRoute, message=message)
-        # pass
+
+
 
 if __name__ == '__main__':
     app.run(host=os.getenv('IP'), port=int(os.getenv('PORT', 8080)), debug=True)

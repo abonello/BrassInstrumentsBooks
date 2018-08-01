@@ -21,10 +21,10 @@
             {
                 "1": {
                     "comment": "",
-                    "grade": "100",
+                    "grade": "1",
                     "instrument": "Trombone",
-                    "list": "B",
-                    "numberInBook": "200",
+                    "list": "A",
+                    "numberInBook": "",
                     "p_index": "1",
                     "pieceComposer": "Anon",
                     "pieceTitle": "Agincourt Song",
@@ -267,6 +267,21 @@
         ],
         "publisher": "Warwick Music",
         "title": "Simple Studies on Trombone Technique",
+        "volume": ""
+    },
+    "16": {
+        "arranger": "",
+        "bookNo": "",
+        "clefs": [],
+        "comment": "",
+        "composer": "",
+        "grades": "",
+        "id": 16,
+        "img": "",
+        "instruments": [],
+        "pieces": [],
+        "publisher": "",
+        "title": "",
         "volume": ""
     },
     "2": {
@@ -727,6 +742,7 @@
         12,
         13,
         14,
-        15
+        15,
+        16
     ]
 }

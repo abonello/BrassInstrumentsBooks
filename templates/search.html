@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="col-md-12 main min-height-main">
+        <!-- {#{ message }#} -->
+    </div>
+
+    <!-- <form action="{#{ url_for('search_filter', data=data) }#}" method="POST"> -->
+    <form action="{{ url_for('search_filter') }}" method="POST">
+
+        <input type="hidden" id="custId" name="data" value="{{ data }}">
+        <input type="hidden" id="custId" name="hidden_data" value="{{ hidden_data }}">
+        <div class="row">
+            <div class="col-md-3 form-group">
+                <label for="instrument">Instruments:</label>
+                <div class="form-group radio" name="instrument">
+                    <label class="radio-inline"><input type="radio" name="instrument" value="all" checked>All</label>
+                    <label class="radio-inline"><input type="radio" name="instrument" value="trumpet">Trumpet</label>
+                    <label class="radio-inline"><input type="radio" name="instrument" value="f_horn">F Horn</label>
+                    <label class="radio-inline"><input type="radio" name="instrument" value="trombone">Trombone</label>
+                </div>
+            </div>
+            <div class="col-md-3 form-group">
+                <label for="grade">Grades:</label>
+                <div class="form-group radio" name="grade">
+                    <label class="radio-inline"><input type="radio" name="grade" value="all" checked>All</label>
+                    <label class="radio-inline"><input type="radio" name="grade" value="1">1</label>
+                    <label class="radio-inline"><input type="radio" name="grade" value="2">2</label>
+                </div>
+            </div>
+            <div class="col-md-3 form-group">
+                <label for="list">List:</label>
+                <div class="form-group radio" name="list">
+                    <label class="radio-inline"><input type="radio" name="list" value="all" checked>All</label>
+                    <label class="radio-inline"><input type="radio" name="list" value="A">A</label>
+                    <label class="radio-inline"><input type="radio" name="list" value="B">B</label>
+                    <label class="radio-inline"><input type="radio" name="list" value="C">C</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-default" name="Proceed" type="submit" value="login">Filter</button>
+        </div>
+    </form>
+
+
+    <div class="col-md-12 main min-height-main">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Piece Title</th>
+                    <th>Comp/Arr</th>
+                    <th>Book Title</th>
+                    <th>Instrument</th>
+                    <th>Grade</th>
+                    <th>List</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for piece in data %}
+                    <tr>
+                        <th>{{ piece[0] }}</th>
+                        <td>{{ piece[1] }}</td>
+                        <td>{{ piece[2] }}</td>
+                        <td>{{ piece[3] }}</td>
+                        <td>{{ piece[4] }}</td>
+                        <td>{{ piece[5] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            
+        </table>
+
+    </div>
+{% endblock %}
