@@ -21,11 +21,11 @@
             {
                 "1": {
                     "comment": "",
-                    "grade": "1",
+                    "grade": "100",
                     "instrument": "Trombone",
-                    "list": "A",
-                    "numberInBook": "",
-                    "p_index": 1,
+                    "list": "B",
+                    "numberInBook": "200",
+                    "p_index": "1",
                     "pieceComposer": "Anon",
                     "pieceTitle": "Agincourt Song",
                     "syllabusYear": "2017"
